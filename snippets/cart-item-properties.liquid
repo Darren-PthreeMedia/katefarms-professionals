@@ -1,0 +1,109 @@
+{%- assign property_size = item.properties | size -%}
+{%- assign subscription_frequency = blank -%}
+{%- assign subscription_interval = blank -%}
+{%- assign item_product = item.product -%}
+
+{%- if property_size > 0 -%}
+
+  {%- capture subscription_frequency -%}
+    {% for p in item.properties %}
+      {% if p.first == 'shipping_interval_frequency' %}
+        {{ p.last }}
+      {% endif %}
+    {% endfor %}
+  {%- endcapture -%}
+
+  {%- capture subscription_interval -%}
+    {% for p in item.properties %}
+      {% if p.first == 'shipping_interval_unit_type' %}
+        {{ p.last }}
+      {% endif %}
+    {% endfor %}
+  {%- endcapture -%}
+
+{%- endif -%}
+
+{%- if subscription_frequency -%}
+  {%- if item.product.metafields.subscriptions.original_handle != blank -%}
+    {%- assign h = item.product.metafields.subscriptions.original_handle -%}
+
+    {%- assign item_product = all_products[h] -%}
+  {%- endif -%}
+{%- endif -%}
+
+<div class="item-properties text-base">
+
+  {%- if item_product.metafields.katefarms.product_flavor != blank -%}
+    {{ item_product.metafields.katefarms.product_flavor }}
+  {%- endif -%}
+
+
+  {% if property_size > 0 %}
+    <div class="my-2 md:my-0">
+
+      {% if item.properties %}
+        <div class="cart-item-properties">
+          {% for property in item.properties %}
+
+            {%- capture subscription_frequency -%}
+              {% for p in item.properties %}
+                {% if p.first == 'shipping_interval_frequency' %}
+                  {{ p.last }}
+                {% endif %}
+              {% endfor %}
+            {%- endcapture -%}
+
+
+            {%- capture subscription_interval -%}
+              {% for p in item.properties %}
+                {% if p.first == 'shipping_interval_unit_type' %}
+                  {{ p.last }}
+                {% endif %}
+              {% endfor %}
+            {%- endcapture -%}
+
+            {% unless property.last == blank %}
+              <div class="cart-item-property sr-only">
+                <span class="cart-item-property-label">
+                  {{ property.first }}:
+                </span>
+                {% if property.last contains '/uploads/' %}
+                  <a
+                    class="cart-item-property-image"
+                    href="{{ property.last }}">
+                    {{ property.last | split: '/' | last }}
+                  </a>
+                {% else %}
+                  <span class="cart-item-property-value">
+                    {{ property.last }}
+                  </span>
+                {% endif %}
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+
+        {%- if subscription_frequency != blank -%}
+          {%- assign percentage  = item.product.metafields.subscriptions.discount_percentage | times: 1.00 -%}
+          <div class="cart-variant">
+            {% assign subscription_frequency = subscription_frequency | strip | times: 1 %}
+
+            {%- capture subscription_frequency -%}
+              {%- if subscription_frequency > 1 -%}
+                every {{ subscription_frequency }} {{ subscription_interval | downcase }}
+              {%- else -%}
+                every {{ subscription_interval | downcase | replace: 's', ''}}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- assign price = item.final_price | money -%}
+
+            {{ 'cart.item_properties.subscription_frequency' | t: frequency: subscription_frequency, price: price, percentage: '(10% off)', per_case: '/case' }}
+          </div>
+        {%- endif -%}
+      {% endif %}
+
+    </div>
+  {% endif %}
+
+</div>

@@ -1,0 +1,71 @@
+<section class="faqs-q-and-a-section">
+  <div class="container">
+    <div class="faq-accordion-container">
+      <div class="accordion-container medical-education generalTopics" targetForJS="generalTopics">
+        {% for block in section.blocks %} 
+          <div class="ac">
+            <h2 class="ac-header">
+              <button class="ac-trigger"><span>{{ block.settings.title }}</span></button>
+            </h2>
+            <div class="ac-panel">
+              <div class="ac-text">
+                <p>{{ block.settings.body }}</p>
+                <span class="link-container">
+                  <h3>CPEU LEVEL: {{ block.settings.level }} | CPEU HOURS APPROVED: {{ block.settings.hours }}</h3>
+                  <p>This course has been approved by the Commission on Dietetic Registration (CDR) for {{ block.settings.hours }} CPEU hours for Registered Dietitians.</p>
+                  <a href="{{ block.settings.link }}" target="_blank">Click here to register for and watch this webinar.</a>
+                <span>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "General Topics",
+  "settings": [
+    {
+      "label": "Headline",
+      "id": "headline",
+      "type": "text"
+    }      
+  ],
+  "blocks": [
+    {
+      "type": "general",
+      "name": "General Topic",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Body",
+          "id": "body"
+        },
+        {
+          "type": "text",
+          "label": "Level",
+          "id": "level"
+        },
+        {
+          "type": "text",
+          "label": "Hours",
+          "id": "hours"
+        },
+        {
+          "type": "url",
+          "label": "link",
+          "id": "link"
+        }                
+      ]
+    }
+  ]
+}
+{% endschema %}

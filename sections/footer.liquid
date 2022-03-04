@@ -1,0 +1,46 @@
+{% include 'shop-urls-init' %}
+
+
+<footer
+  id="contentinfo"
+  class="content-info bg-primary-blue text-white px-2 py-8"
+  data-section-type="footer"
+  data-section-id="{{ section.id }}"
+>
+
+  <div class="container">
+    {% comment %}
+    <div id="footer-nav"> </div>
+    {% endcomment %}
+    <div class="row row-logo justify-between pb-8 border-b border-b-solid border-footer-gray">
+
+      <div class="w-auto pb-4 md:pb-0">
+
+        <a
+          class="brand block w-40 h-10 relative"
+          href="https://nutritioncommunity.katefarmshealth.com/"
+        >
+          {% include 'logo.svg' %}
+
+          <span class="sr-only"> {{ shop.name }} </span>
+        </a>
+
+      </div>
+
+      <div id="social-nav" class="w-full sm:w-auto"> </div>
+    </div>
+    <div class="row md:flex-row-reverse md:justify-end items-center mt-4 md:mt-0">
+      <div id="policy-nav" class="col w-full md:w-auto md:inline py-4"> </div>
+      <div class="col w-full md:w-auto py-4 md:inline text-footer-gray text-xs">
+        &copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All Rights Reserved
+      </div>
+    </div>
+
+    <div class="row text-xs">
+      <div class="col w-full">
+        <div class="rte">{{ settings.footer_disclaimers }}</div>
+      </div>
+    </div>
+
+  </div>
+</footer>

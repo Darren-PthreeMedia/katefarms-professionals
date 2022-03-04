@@ -1,0 +1,53 @@
+{% if customer %}
+    <div class="main-navigation">
+        <div class="main-nav-container-1">
+            <a class="logo-link" href="/">
+                {% include 'kfnc-logo.svg' %}
+            </a>    
+            <button type="button" class="nav-toggle">
+                <span class="nav-toggle__icon-bar nav-toggle__icon-bar--first absolute top-1/2 left-1/2 w-7 rounded-full bg-primary-blue"></span>
+                <span class="nav-toggle__icon-bar absolute top-1/2 left-1/2 w-7 rounded-full bg-primary-blue"></span>
+                <span class="nav-toggle__icon-bar nav-toggle__icon-bar--last absolute top-1/2 left-1/2 w-7 rounded-full bg-primary-blue"></span>
+                <span class="sr-only">
+                    Open navigation
+                </span>
+            </button>    
+        </div>
+        <ul class="menu">
+            {% for link in linklists.main-menu.links %}
+                <li>
+                    <a href= "{{ link.url }}"
+                        class="{% if page.url == link.url %}active{% endif %}"
+                        >
+                        {{ link.title }}
+                    </a>
+                </li>
+            {% endfor %}
+            <li class="cart-li">
+                <a href="/cart" class="cart-link">
+                    <span class="link-text-container">Cart</span>
+                    <div class="link-icon-container w-8 h-8 flex items-center relative">
+                        <div class="icon-svg text-primary-blue">
+                          <svg viewBox="0 0 54.03 44.18" xmlns="http://www.w3.org/2000/svg"><path d="M53.67 9.11A2 2 0 0052 8.25H13.09l-1.31-4.54A5.14 5.14 0 006.86 0H2a2 2 0 000 4h4.86a1.13 1.13 0 011.08.81l5.75 20 .94 3.41a5.46 5.46 0 005.23 4h22.2a5.4 5.4 0 005-3.43L53.89 11a2 2 0 00-.22-1.89z"></path><circle cx="21.67" cy="40" r="4.18"></circle><circle cx="40.63" cy="40" r="4.18"></circle></svg>    
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="account-li">
+                <a href="/account" class="account-link">
+                    <span class="link-text-container">Account settings</span>
+                    <div class="link-icon-container w-8 h-8 flex items-center relative">
+                        <div class="icon-svg text-primary-blue">
+                            <svg viewBox="0 0 48.96 48.96" xmlns="http://www.w3.org/2000/svg"><path d="M24.44 0A24.48 24.48 0 1049 24.48 24.48 24.48 0 0024.44 0zm-.11 13.76a8 8 0 11-8 8 8 8 0 018-8zM9.58 39.61a9.7 9.7 0 019.23-6.7h10.94a9.72 9.72 0 019.31 6.92 21.13 21.13 0 01-29.48-.22z"></path></svg>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="logout-li"><a href="/account/logout" class="logout">Sign out</a></li>
+        </ul>
+    </div>
+{% else %}
+    <a href="/" style="max-width: 400px; margin: 0 auto; width: 100%; display: flex; justify-content: center; padding: 24px 48px;">
+        {% include 'kfnc-logo.svg' %}
+    </a>
+{% endif %}

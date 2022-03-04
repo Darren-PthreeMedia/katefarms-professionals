@@ -1,0 +1,40 @@
+{%- assign count = collection.metafields.katefarms.card_title.size -%}
+{%- assign width = 3 -%}
+
+{%- if count < 3 or count == 4 -%}
+  {%- assign width = 2 -%}
+{%- endif -%}
+
+<div class="collection-cards pb-8">
+  {%- if collection.metafields.katefarms.linked_card_section_title != blank -%}
+    <div class="text-4xl font-medium text-black pt-10">{{ collection.metafields.katefarms.linked_card_section_title }}</div>
+  {%- endif -%}
+
+  <div class="row -mx-2 md:-mx-4">
+    {% for value in collection.metafields.katefarms.card_title %}
+    <div class="col w-full md:w-1/{{ width }} p-2 md:p-4 md:flex">
+      <a
+        class="collection-card flex flex-row-reverse flex-no-wrap w-full flex-1 justify-between bg-white rounded-lg p-6"
+        href="{{ collection.metafields.katefarms.card_link[forloop.index0] }}"
+      >
+        <div class="w-12 h-12 pt-4">
+          {% for img in collection.metafields.katefarms.card_icon[forloop.index0] %}
+          <img src="{{ img.src }}" class="card-icon w-12 h-12">
+          {% endfor %}
+        </div>
+
+        <div class="flex-1 pr-4">
+          <div class="text-xl font-medium text-primary-blue leading-tighter mb-3">
+            {{ value }}
+          </div>
+
+          <div class="text-base text-black font-light w-full">
+            {{ collection.metafields.katefarms.card_content[forloop.index0] }}
+          </div>
+        </div>
+      </a>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>

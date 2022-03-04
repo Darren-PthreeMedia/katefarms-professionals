@@ -1,0 +1,33 @@
+<a
+  id="remove-cart-{{ forloop.index }}" 
+  href="/cart/change?line={{ forloop.index }}&amp;quantity=0"
+  class="btn remove-from-cart"
+>
+  {{ 'cart.general.remove' | t }}
+</a>
+
+<script>
+  if (window.jQuery) {
+    jquery = window.jQuery;
+  }
+  
+  jquery('#remove-cart-{{ forloop.index }}').click(function() {
+    // Measure adding a product to a shopping cart by using an 'add' actionFieldObject
+    // and a list of productFieldObjects.
+    var dataLayer = window.dataLayer || [ ];
+    dataLayer.push({
+      'event': 'removeFromCart',
+      'ecommerce': {
+        'currencyCode': 'USD',
+        'remove': {                                // 'add' actionFieldObject measures.
+          'products': [{                        //  adding a product to a shopping cart.
+            'name': '{{ item.product.title }}',
+            'id': '{{ item.product_id }}',
+            'price': '{{ item.final_price | money }}',
+            'quantity': {{ item.quantity }}
+          }]
+        }
+      }
+    });
+  });
+</script>

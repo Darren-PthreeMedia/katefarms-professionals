@@ -1,0 +1,97 @@
+<section data-section-type="product-where-to-get" data-section-id="{{ section.id }}">
+  <div class="container py-6 xl:py-12">
+
+    <div class="row mb-6">
+      <div class="col w-full">
+        {%- if section.settings.heading_title != blank -%}
+          <h2 class="leading-tight md:pb-1 md:border-b md:border-lightest-gray text-4xl">{{ section.settings.heading_title }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.heading_content != blank -%}
+          <div class="xl:w-2/3">
+            <div class="rte">{{ section.settings.heading_content | replace: '</a>', ' &rsaquo;</a>' }}</div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col w-full md:w-1/2">
+
+        {%- if section.settings.left_column_heading -%}
+          <h3 class="font-bold text-2xl">{{ section.settings.left_column_heading }}</h3>
+        {%- endif -%}
+
+        {%- if section.settings.left_column_content -%}
+          <div class="rte">
+            {{ section.settings.left_column_content }}
+          </div>
+        {%- endif -%}
+
+      </div>
+
+      <div class="col w-full md:w-1/2">
+
+        {%- if section.settings.right_column_heading -%}
+          <h3 class="font-bold text-2xl">{{ section.settings.right_column_heading }}</h3>
+        {%- endif -%}
+
+        {%- if section.settings.right_column_content -%}
+          <div class="rte">
+            {{ section.settings.right_column_content }}
+          </div>
+        {%- endif -%}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "\"Where to get\" Content",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Top Content"
+      },
+      {
+        "type": "text",
+        "id": "heading_title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_content",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Two column section"
+      },
+      {
+        "type": "text",
+        "id": "left_column_heading",
+        "label": "Left Column Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "left_column_content",
+        "label": "Left Column Content"
+      },
+      {
+        "type": "text",
+        "id": "right_column_heading",
+        "label": "Right Column Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "right_column_content",
+        "label": "Right Column Content"
+      }
+    ]
+  }
+{% endschema %}

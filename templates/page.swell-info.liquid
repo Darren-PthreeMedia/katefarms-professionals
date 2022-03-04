@@ -1,0 +1,25 @@
+{% layout none %}
+<!doctype html>
+<html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_accent }}">
+  <meta name="robots" content="noindex">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+
+  {% include 'script-tags', layout: 'none' %}
+  {% include 'swell-init' %}
+
+  {% comment %} {{ 'template.page.swell-info.js' | asset_url | script_tag }} {% endcomment %}
+
+  {{ content_for_header }}
+</head>
+
+<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} template-{{ template | handle }}">
+<iframe src="https://localhost:3003" data-wp-frame frameborder="0"></iframe>
+
+</body>
+</html>

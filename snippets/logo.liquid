@@ -1,0 +1,23 @@
+{% include 'shop-urls-init' %}
+{% if customer %}
+<a
+  class="brand block w-40 h-10 relative"
+  href="https://nutritioncommunity.katefarmshealth.com/collections"
+>
+<!-- href="https://nutritioncommunity.katefarmshealth.com/collections/shop-all" -->
+{% else %}
+<a
+  class="brand block w-40 h-10 relative"
+  href="https://nutritioncommunity.katefarmshealth.com/collections"
+>
+<!-- href="https://nutritioncommunity.katefarmshealth.com/account/login" -->
+{% endif %}
+
+  {% include 'logo.svg' %}
+  <span class="sr-only"> {{ shop.name }} </span>
+</a>
+
+<div class="absolute right-0 top-0 mr-2 flex items-center xl:hidden">
+  {% include 'cart-icon' %}
+  {% include 'nav-toggle' %}
+</div>

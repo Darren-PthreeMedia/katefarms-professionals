@@ -1,0 +1,9 @@
+{%- if settings.show_reviews -%}
+  <section data-section-type="product-reviews" data-section-id="{{ section.id }}">
+    <div class="container py-6">
+      <h2 class="text-4xl">{{ 'products.product.reviews' | t }}</h2>
+
+      {% include 'okendo-reviews-widget' %}
+    </div>
+  </section>
+{%- endif -%}

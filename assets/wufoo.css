@@ -1,0 +1,68 @@
+body,
+.wufoo .section h3,
+.wufoo .info h2 {
+  font-family: Post Grotesk, -apple-system, sans-serif;
+  color: #046 !important;
+}
+
+.info {
+  padding: 0 20px;
+}
+
+.wufoo input.text,
+.wufoo textarea.textarea,
+.wufoo input.file,
+.wufoo select.select,
+.wufoo li .wufoo-dropdown span {
+  color: #046 !important;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .wufoo li {
+    width: 100%;
+  }
+}
+.wufoo label.desc,
+.wufoo legend.desc,
+.likert caption {
+  color: #046 !important;
+}
+
+form ul {
+  padding: 0 16px;
+}
+
+.wufoo .section h3 {
+  margin-top: 2em;
+}
+
+form li.buttons input {
+  background-color: #046;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-shadow: none;
+  line-height: 1.15;
+  border: 0;
+  font-size: 23px !important;
+  font-weight: bold;
+  padding: 20px 36px;
+  display: block;
+  margin-top: 20px;
+}
+
+#fo2li805,
+#fo2li355,
+#fo2li680,
+#fo2licaptcha {
+  margin-top: 2em;
+}

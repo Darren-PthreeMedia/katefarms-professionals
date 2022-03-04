@@ -1,0 +1,18 @@
+
+{%- if layout == 'theme' -%}
+<link type="text/css" href="{{ 'layout.theme.css' | asset_url }}" rel="stylesheet">
+{%- else -%}
+<link rel="prefetch" href="{{ 'layout.theme.css' | asset_url }}" as="style">
+{%- endif -%} {%- if template == 'cart' -%}
+<link type="text/css" href="{{ 'template.cart.css' | asset_url }}" rel="stylesheet">
+{%- else -%}
+<link rel="prefetch" href="{{ 'template.cart.css' | asset_url }}" as="style">
+{%- endif -%} {%- if template == 'product' -%}
+<link type="text/css" href="{{ 'template.product.css' | asset_url }}" rel="stylesheet">
+{%- else -%}
+<link rel="prefetch" href="{{ 'template.product.css' | asset_url }}" as="style">
+{%- endif -%} {%- if template == 'product.oos' -%}
+<link type="text/css" href="{{ 'template.product.oos.css' | asset_url }}" rel="stylesheet">
+{%- else -%}
+<link rel="prefetch" href="{{ 'template.product.oos.css' | asset_url }}" as="style">
+{%- endif -%}

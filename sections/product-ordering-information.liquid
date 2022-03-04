@@ -1,0 +1,23 @@
+<section data-section-type="product-ordering-information" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="c-accordion__item">
+      <h2 class="c-accordion__title" role="button" tabindex="0" aria-controls="{{ section.id }}-info" aria-expanded="false">
+        Ordering Information
+      </h2>
+
+      <div id="{{ section.id }}-info" class="c-accordion__content pb-12" style="display: none;">
+        <div class="row py-4">
+          {{ product.metafields.accentuate.ordering_information }}        
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Ordering Information"
+  }
+{% endschema %}

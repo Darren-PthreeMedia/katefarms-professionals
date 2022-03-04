@@ -1,0 +1,63 @@
+<section class="dashboard-sections-container">
+  <div class="dashboard-sections">
+    {% for block in section.blocks %} 
+      <div class="dashboard-section-item {% if block.settings.icon %} image-is-icon {% endif %}" style='background-color: {{ block.settings.background_color }};'>
+          <div class="copy">
+            <h2>{{ block.settings.title }}</h2>
+            <p>{{ block.settings.body_text }}</p>
+            <a href="{{ block.settings.link }}" class="btn">{{ block.settings.link_text }}</a>
+          </div>
+          {{ block.settings.section_image | img_url: '1024x' | img_tag }}
+      </div>
+    {% endfor %}      
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dashboard Sections",
+  "blocks": [
+    {
+      "type": "Section",
+      "name": "Dashboard Section",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Headline",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Body Text",
+          "id": "body_text"
+        },
+        {
+          "type": "url",
+          "label": "Link",
+          "id": "link"
+        },
+        {
+          "type": "text",
+          "label": "Link Text",
+          "id": "link_text"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "section_image"
+        },        
+        {
+          "type": "checkbox",
+          "label": "Icon",
+          "id": "icon"
+        },        
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color"
+        }                
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,98 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available when you add "Collection list" section in the Theme Editor.
+
+  Theme Store required settings
+  - Heading: title of the collection list section
+  - Collection
+{%- endcomment -%}
+<section class="collection-list overflow-hidden">
+<div class="container">
+  {% if section.settings.title != blank %}
+    <h2 class="collection-list__title">{{ section.settings.title | escape }}</h2>
+  {% endif %}
+
+  {% for block in section.blocks %}
+    {%- assign collection = collections[block.settings.collection] -%}
+    {%- assign data = block.settings -%}
+    {% include 'collection-list--collection', _collection: collection, data: data %}
+
+  {% endfor %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Collection list",
+    "max_blocks": 12,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "label": "Collection Link",
+            "id": "collection",
+            "type": "collection"
+          },
+          {
+            "type": "text",
+            "id": "block_title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "bubble_copy",
+            "label": "Bubble Copy"
+          },
+          {
+            "type": "text",
+            "id": "block_copy",
+            "label": "Description",
+            "default": "Descripption"
+          },
+          {
+            "type": "text",
+            "id": "block_button_copy",
+            "label": "Button Copy"
+          },
+          {
+            "type": "image_picker",
+            "id": "collection_image",
+            "label": "image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection list",
+        "category": "Collection",
+        "blocks": [
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

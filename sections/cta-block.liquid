@@ -1,0 +1,113 @@
+<div class="wp-block wp-block--type-cover has-background-image add-top-spacing add-bottom-spacing overflow-hidden">
+
+  <div class="wp-block-cover-wrap">
+
+    {%- if section.settings.image -%}
+      <div class=" md:absolute md:inset-0 wp-block-cover-mobile-banner">
+        <img
+          width="1024"
+          height="490"
+          class="block w-full h-full lazyload md:object-cover md:object-center"
+          alt=""
+          data-src="{{ section.settings.image.url }}"
+          data-srcset="{% include 'responsive-bg-image', image: section.settings.image %}"
+          data-sizes="auto"
+        >
+      </div>
+    {%- endif -%}
+
+    <div class="wp-block-cover">
+
+      <div class="wp-block-cover__inner-container">
+
+        <div class="wp-block wp-block--type-columns">
+
+          <div class="container">
+
+            <div class="wp-block-columns">
+
+              <div class="col w-full md:w-5/12">
+
+                <div class="wp-block-column bg-white p-4 xl:p-6 rounded">
+                  <h2>{{ section.settings.title }}</h2>
+
+
+                  <div class="rte">
+                    {{ section.settings.content }}
+                  </div>
+
+
+                  {%- if section.settings.button_link -%}
+                    <div class="wp-block-buttons">
+
+                      <div class="wp-block-button button-primary-blue is-with-caret">
+                        <a
+                          href="{{ section.settings.button_link }}"
+                          class="wp-block-button__link btn-lg"
+                        >{{ section.settings.button_text }}</a>
+
+                      </div>
+
+                    </div>
+                  {%- endif -%}
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% schema %}
+    {
+    "name": "CTA Block",
+    "settings": [
+      {
+        "id": "title",
+        "label": "Title",
+        "type": "text"
+      },
+      {
+        "id": "content",
+        "label": "Content",
+        "type": "html"
+      },
+      {
+        "id": "button_link",
+        "label": "Button Link",
+        "type": "url"
+      },
+      {
+        "id": "button_text",
+        "label": "Button Text",
+        "type": "text"
+      },
+      {
+        "id": "image",
+        "label": "Image",
+        "type": "image_picker"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Layout",
+        "name": "CTA Section",
+        "settings": {
+          "title": "Section title",
+          "content": "<p>Section content</p>"
+        }
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,78 @@
+{% if section.settings.show_section %}
+
+  <div class="presenter-section-container">
+    <div class="presenter-section-container-inner">
+      <h2>About our presenters</h2>
+      <div class="presenter-item-container">
+        {% for block in section.blocks %}
+          <a class="presenter-item" href="javascript:void(0)" id="presenter{{ forloop.index }}">
+            {{ block.settings.presenter_image | img_url: '1024x' | img_tag }}          
+            <span>{{ block.settings.presenter_name }}</span>
+            <span>{{ block.settings.presenter_role }}</span>
+            <span>Read more</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  {% for block in section.blocks %}
+    <div class="presenter-pop-up presenter{{ forloop.index }}">
+      <a href="javascript:void(0);" class="close-pop-up">{% include 'icon-plus.svg' %} </a>
+      <div class="presenter-content">
+        {{ block.settings.presenter_image | img_url: '1024x' | img_tag }}
+        <div class="copy-container">
+          <span>{{ block.settings.presenter_name }}</span>
+          <span>{{ block.settings.presenter_role }}</span>
+          <span>{{ block.settings.presenter_description }}</span>
+        </div>
+        </div>
+    </div>
+  {% endfor %}
+
+
+  {% endif %}
+
+
+{% schema %}
+{
+  "name": "Presenters",
+  "settings": [
+    {
+      "label": "Show Section",
+      "id": "show_section",
+      "type": "checkbox"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "presenter",
+      "name": "Presenter",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Presenter Image",
+          "id": "presenter_image"
+        },
+        {
+          "type": "text",
+          "label": "Presenter Name",
+          "id": "presenter_name"
+        },
+        {
+          "type": "text",
+          "label": "Presenter Role",
+          "id": "presenter_role"
+        },
+        {
+          "type": "textarea",
+          "label": "Presenter Description",
+          "id": "presenter_description",
+          "info": "This info appears on lightbox"
+        }
+      ]
+    }  
+  ]
+}
+{% endschema %}

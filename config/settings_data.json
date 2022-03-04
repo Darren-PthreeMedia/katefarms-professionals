@@ -1,0 +1,1201 @@
+{
+  "current": {
+    "color_accent": "#c4d5d3",
+    "color_body_text": "#161d25",
+    "color_main_bg": "#fff",
+    "use_analytics_scripts": false,
+    "font_heading": "helvetica_n4",
+    "font_body": "helvetica_n4",
+    "share_image": "shopify:\/\/shop_images\/KF-NutritionComm-Badge_V1.png",
+    "social_sharing_blog": false,
+    "share_facebook": false,
+    "share_twitter": false,
+    "share_pinterest": false,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "cart_notes_enable": false,
+    "favicon": "shopify:\/\/shop_images\/cropped-favicon-1.png",
+    "show_reviews": false,
+    "footer_disclaimers": "",
+    "enable_signup": false,
+    "signup_header": "",
+    "signup_subheader": "",
+    "signup_policy": "By signing up, you agree to Kate Farms’",
+    "signup_policy_url": "https:\/\/dev-kate-farms-v2.pantheonsite.io\/policy\/privacy-policy\/",
+    "show_announcement_bar": true,
+    "announcement_bar_html": "<div class=\"container\">Welcome to the Kate Farms Nutrition Community! <\/div>",
+    "for_clinicians_url": "https:\/\/katefarms.com\/for-clinicians",
+    "comparison_table_id": "2",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/KF-NutritionComm-Badge_V1.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#f3f3f3",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#004466",
+    "checkout_button_color": "#01141e",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "collection-list-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "pediatric-formulas",
+              "block_title": "Pediatric Formulas",
+              "bubble_copy": "Tube Feeding & Drinking",
+              "block_copy": "Made for growing kids between 1 and 13 years old, these shakes and formulas are plant-based and taste great.",
+              "block_button_copy": "Order Pediatric Formulas"
+            }
+          },
+          "collection-list-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "adult-formulas",
+              "block_title": "Adult Formulas",
+              "bubble_copy": "Tube Feeding & Drinking",
+              "block_copy": "Plant-based and easily digested, our meal replacement shakes and medical formulas taste great and contain no artificial colors, flavors, or non-nutritive sweeteners.",
+              "block_button_copy": "Order Adult Formulas"
+            }
+          },
+          "8eb64553-3910-4b6e-a2fe-b7fafa1a7b17": {
+            "type": "collection",
+            "settings": {
+              "collection": "peptide-formulas",
+              "block_title": "Peptide Formulas",
+              "bubble_copy": "Tube Feeding & Drinking",
+              "block_copy": "Made for kids and adults with impaired digestion. Our peptide formulas, with enzymatically hydrolyzed organic pea protein, are appropriate for tube feeding or taste great for drinking.",
+              "block_button_copy": "Order Peptide Formulas"
+            }
+          },
+          "7f42bf7a-61d3-4032-a178-bd6e3e11c474": {
+            "type": "collection",
+            "settings": {
+              "collection": "therapeutic-formulas",
+              "block_title": "Therapeutic Formulas",
+              "bubble_copy": "Tube Feeding & Drinking",
+              "block_copy": "Formulas made to support health needs associated with a range of diseases and conditions.",
+              "block_button_copy": "Order Therapeutic Nutrition"
+            }
+          },
+          "collection-list-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "kids-formulas",
+              "block_title": "Nutrition Shakes",
+              "bubble_copy": "Drinking",
+              "block_copy": "A delicious and convenient plant-based shake, available in vanilla, chocolate, and coffee.",
+              "block_button_copy": "Order Nutrition Shakes"
+            }
+          },
+          "911c7734-a142-4a42-92ad-2eaf46ec7c97": {
+            "type": "collection",
+            "settings": {
+              "collection": "patient-resources",
+              "block_title": "Patient Resources",
+              "bubble_copy": "",
+              "block_copy": "Printed patient-facing materials for your practice",
+              "block_button_copy": "Order Patient Resources"
+            }
+          }
+        },
+        "block_order": [
+          "collection-list-0",
+          "collection-list-2",
+          "8eb64553-3910-4b6e-a2fe-b7fafa1a7b17",
+          "7f42bf7a-61d3-4032-a178-bd6e3e11c474",
+          "collection-list-1",
+          "911c7734-a142-4a42-92ad-2eaf46ec7c97"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "announcement_bar_enabled": false,
+          "announcement_bar_home_page_only": true,
+          "announcement_bar_text": "Announce something here",
+          "announcement_bar_link": "",
+          "logo_max_width": 230,
+          "menu": "p3-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "1594133782983": {
+        "type": "cta-block",
+        "disabled": true,
+        "settings": {
+          "title": "Customer service",
+          "content": "<p>Our Customer Care team is here to answer your questions and offer personal support.<\/p>\n\n<ul class=\"list-sm\">\n<li>Getting formula for medical use<\/li>\n<li>Insurance coverage<\/li>\n<li>Usage, storage, and travel guidelines<\/li>\n<li>Ordering and shipping information<\/li>\n<\/ul>",
+          "button_link": "https:\/\/www.katefarms.com\/customer-service\/",
+          "button_text": "Contact Us",
+          "image": "shopify:\/\/shop_images\/PHOTOGRAPHY_2019_Office_Candids_00025-_1.jpg"
+        }
+      },
+      "1594220270254": {
+        "type": "rich-text",
+        "settings": {
+          "title": "Order Samples & Resources",
+          "heading_level": "h1",
+          "text": "<p>Use this page to order samples and patient literature for your practice. <br><b>If you would like to ship a sample directly to your patient, please use our secure Patient Sample Request Form at <a href=\"https:\/\/katefarms.com\/samples\" target=\"_blank\">katefarms.com\/samples<\/a> to ensure privacy of your patient's shipping information.<br><b><\/b><\/b><\/p>",
+          "class": "order-all-heading"
+        }
+      },
+      "1594220600389": {
+        "type": "breadcrumbs",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "breadcrumbs": {
+        "type": "breadcrumbs",
+        "settings": {
+        }
+      },
+      "product": {
+        "type": "product",
+        "settings": {
+          "shipping_content_title": "Free Two-Day Shipping On All Orders",
+          "shipping_content": "<p>Estimated Timeline: Two business days to most of the continental US. Three days to rural parts of Montana, New Mexico and Wyoming. Four days to Hawaii and Alaska.<\/p><p><\/p>"
+        }
+      },
+      "product-details": {
+        "type": "product-details",
+        "blocks": {
+          "1594313069964": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/certified-organic.png",
+              "title": "Certified Organic",
+              "max_width": 65,
+              "max_height": 59
+            }
+          },
+          "1594314152069": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/certified-kosher.png",
+              "title": "Certified Kosher",
+              "max_width": 57,
+              "max_height": 57
+            }
+          },
+          "1594314160437": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/gluten-free.png",
+              "title": "Certified Gluten-Free",
+              "max_width": 94,
+              "max_height": 53
+            }
+          },
+          "1594314161270": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/nongmo_blue.png",
+              "title": "Verified Non-GMO",
+              "max_width": 76,
+              "max_height": 46
+            }
+          }
+        },
+        "block_order": [
+          "1594313069964",
+          "1594314152069",
+          "1594314160437",
+          "1594314161270"
+        ],
+        "settings": {
+        }
+      },
+      "product-ingredients-nutrition": {
+        "type": "product-ingredients-nutrition",
+        "settings": {
+        }
+      },
+      "product-agt": {
+        "type": "product-agt",
+        "settings": {
+          "heading": "All good things.<sup class=\"font-normal\">®<\/sup>"
+        }
+      },
+      "product-callouts": {
+        "type": "product-callouts",
+        "blocks": {
+          "1594315090789": {
+            "type": "callout",
+            "settings": {
+              "heading": "Free Two-Day Shipping On All Orders",
+              "content": "<p>All of our formulas and shakes can be purchased online with fast &amp; free shipping within the United States. We cannot ship internationally at this time.<\/p><p><\/p><p><a href=\"https:\/\/www.katefarms.com\/customer-service\/online-orders\/shipping\/\" title=\"https:\/\/www.katefarms.com\/customer-service\/online-orders\/shipping\/\">Learn more<\/a><\/p>"
+            }
+          },
+          "1594315099183": {
+            "type": "callout",
+            "settings": {
+              "heading": "100% Satisfaction Guaranteed",
+              "content": "<p>If you are unsatisfied with your order for any reason, we will happily provide replacements or a refund up to one year from the date of purchase. Visit our Refunds and Replacements Policy for more information. <\/p><p><a href=\"https:\/\/www.katefarms.com\/online-orders\/refunds-replacements\/\" title=\"https:\/\/www.katefarms.com\/online-orders\/refunds-replacements\/\">Learn more<\/a><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1594315090789",
+          "1594315099183"
+        ],
+        "settings": {
+        }
+      },
+      "product-reviews": {
+        "type": "product-reviews",
+        "settings": {
+        }
+      },
+      "product-customer-service": {
+        "type": "product-customer-service",
+        "settings": {
+          "heading_title": "Customer Service",
+          "heading_content": "<p>Get answers to our most common questions about purchasing, orders, and Kate Farms products.<\/p><p><a href=\"https:\/\/www.katefarms.com\/customer-service\/\" title=\"https:\/\/www.katefarms.com\/customer-service\/\">Customer Service<\/a><\/p>"
+        }
+      },
+      "product-where-to-get": {
+        "type": "product-where-to-get",
+        "settings": {
+          "heading_title": "Where to Get Kate Farms",
+          "heading_content": "",
+          "left_column_heading": "Home medical supplier via insurance",
+          "left_column_content": "<p>Kate Farms is broadly covered by insurance and available through home medical suppliers.<\/p><p>We can help you obtain paperwork for insurance coverage, find a supplier, or answer questions.<\/p><p><\/p><p><a href=\"https:\/\/www.katefarms.com\/customer-service\/get-formula\/home-medical-use\/\" title=\"https:\/\/www.katefarms.com\/customer-service\/get-formula\/home-medical-use\/\">Learn more<\/a><\/p>",
+          "right_column_heading": "Purchase online",
+          "right_column_content": "<p>We offer <a title=\"https:\/\/www.katefarms.com\/customer-service\/online-orders\/shipping\/\" href=\"https:\/\/www.katefarms.com\/customer-service\/online-orders\/shipping\/\" target=\"_blank\">Free Two-Day Shipping<\/a> on all purchases at katefarms.com.<\/p><p>Our products are sold exclusively online and are no longer available in retail stores.<\/p><p><\/p>"
+        }
+      },
+      "product-related": {
+        "type": "product-related",
+        "settings": {
+          "heading": "You may also like"
+        }
+      },
+      "swell-referral": {
+        "type": "swell-referral",
+        "settings": {
+          "title": "How it works",
+          "content": "<p>Earn rewards by sharing your unique referral link with friends.<\/p>\n<ul>\n\t<li>When a purchase is made using your unique referral link, we'll send an email describing how to redeem your reward. <\/li>\n\t<li>Rewards earned by referring multiple friends can be combined up to $40 per one-time order ($10 per successful referral).<\/li>\n\t<li>An account is required to redeem your rewards.<\/li>\n\t<li>Rewards cannot be combined with other discount codes.<\/li>\n\t<li>Earned rewards expire after 12 months.<\/li>\n<\/ul>",
+          "banner": "",
+          "banner_mobile": ""
+        }
+      },
+      "account-buttons": {
+        "type": "account-buttons",
+        "settings": {
+          "button_link": "shopify:\/\/pages\/refer"
+        }
+      },
+      "product-comparison-table": {
+        "type": "product-comparison-table",
+        "settings": {
+          "accordion_title": "Compare Formulas"
+        }
+      },
+      "b2b-login": {
+        "type": "b2b-login",
+        "settings": {
+        }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "settings": {
+          "title": "EXPLORE OUR CLINICALLY PROVEN FORMULAS",
+          "heading_level": "h2",
+          "text": ""
+        }
+      },
+      "resources-hero": {
+        "type": "resources-hero",
+        "settings": {
+          "hero_background_color": "#008298",
+          "hero_title": "FAQs",
+          "heading_color": "#f7f7f7"
+        }
+      },
+      "resources-main": {
+        "type": "resources-main",
+        "blocks": {
+          "18fcbd89-4323-4724-9a05-5a44f088d7d1": {
+            "type": "product-detail-sheet",
+            "settings": {
+              "file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Test.xlsx?v=1620671822",
+              "link_text": "Download Product Detail Sheet"
+            }
+          },
+          "bc42a33e-50a7-4384-8cf0-c5a096124c61": {
+            "type": "product-detail-sheet",
+            "settings": {
+              "file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Test.xlsx?v=1620671822",
+              "link_text": "Download Product Detail Sheet"
+            }
+          },
+          "57ef52af-0609-40db-a6cf-243525bc0e09": {
+            "type": "product-detail-sheet",
+            "settings": {
+              "file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Test.xlsx?v=1620671822",
+              "link_text": "Download Product Detail Sheet"
+            }
+          },
+          "52fe5f6d-259d-4209-9029-19da694dec83": {
+            "type": "product-detail-sheet",
+            "settings": {
+              "file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Test.xlsx?v=1620671822",
+              "link_text": "Download Product Detail Sheet"
+            }
+          },
+          "ff44f6e3-45e9-4a9b-a4a7-0c9bf8b20992": {
+            "type": "ceu",
+            "settings": {
+              "ceu_title": "Phytonutrients in the Clinical Settings",
+              "ceu_copy": "<p>This is custom content. And click this link to <a href=\"https:\/\/google.com\" target=\"_blank\" title=\"https:\/\/google.com\">read more<\/a><\/p>"
+            }
+          },
+          "b0dc2e9b-2c2e-406a-99ec-4b0da4e790ea": {
+            "type": "ceu",
+            "settings": {
+              "ceu_title": "The influence of the Gut Microbiome on",
+              "ceu_copy": "<p>This is custom content.<\/p>"
+            }
+          },
+          "5e469003-4e64-43b8-aef7-3f0453b28549": {
+            "type": "ceu",
+            "settings": {
+              "ceu_title": "Medical Foods, Medial Nutrition Therapy, Insurance Gap",
+              "ceu_copy": "<p>This is custom content.<\/p>"
+            }
+          },
+          "e4c16332-94e6-4985-bc97-e1c34551b2fd": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/juan_2x_81ded5f2-f6c5-4f7b-8562-dfb0f5ca0ce5.png",
+              "presenter_name": "Juan Calisto",
+              "presenter_role": "MD",
+              "read_about_link_text": "Read about Juan ›",
+              "read_about_link_url": "shopify:\/\/pages\/contact-us",
+              "presenter_description": "Juan Calisto is a physician, philanthropist, and educator.\nHe is a pediatric surgeon trained at the University of Pittsburgh and currently based in miami Florida at Nicklaus Children's Hospital.\nHe helps children and their families to regain their health through surgery and medical interventions.\nHe is an advocate of whole food and plant-based nutrition, having seem dramatic improvements in health by using food as an adjunct to improve recovery after surgery and modify disease.\n<a_href><\/a_href>"
+            }
+          },
+          "f135740c-7f86-4374-83e1-ff08ef115170": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/debora_2x_e89de148-5374-4e56-a58b-d91d80ab605b.png",
+              "presenter_name": "Debora Duro",
+              "presenter_role": "MD, MS",
+              "read_about_link_text": "Read about Debora ›",
+              "read_about_link_url": "",
+              "presenter_description": "Debora Calisto is a physician, philanthropist, and educator.\nHe is a pediatric surgeon trained at the University of Pittsburgh and currently based in miami Florida at Nicklaus Children's Hospital.\nHe helps children and their families to regian their health through surgery and medical interventions.\nHe is an advocate of whole food and plant-based nutrition, haviing seem dramatic improvements in health by using food as an adjunct to improve recovery after surgery and modify disease."
+            }
+          },
+          "dffba600-8892-4c50-92a5-85f225dec5ea": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/sezelle_2x_31a61e0e-b743-4ff5-950e-3fa5d0b141a9.png",
+              "presenter_name": "Sezelle Gereau",
+              "presenter_role": "MD",
+              "read_about_link_text": "Read about Sezelle ›",
+              "read_about_link_url": "shopify:\/\/blogs\/news",
+              "presenter_description": "Sezelle Calisto is a physician, philanthropist, and educator.\nHe is a pediatric surgeon trained at the University of Pittsburgh and currently based in miami Florida at Nicklaus Children's Hospital.\nHe helps children and their families to regian their health through surgery and medical interventions.\nHe is an advocate of whole food and plant-based nutrition, haviing seem dramatic improvements in health by using food as an adjunct to improve recovery after surgery and modify disease."
+            }
+          },
+          "79b9bd73-229e-4105-a044-58a7bc5c1e2a": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/diane_2x_f0f9e8f5-3240-4d00-91f7-eae4320ebb1d.png",
+              "presenter_name": "Diane Horton",
+              "presenter_role": "RDN, LDN, CSP",
+              "read_about_link_text": "Read about Diane",
+              "read_about_link_url": "shopify:\/\/products\/nutrition-shake-chocolate",
+              "presenter_description": "Diane Calisto is a physician, philanthropist, and educator.\nHe is a pediatric surgeon trained at the University of Pittsburgh and currently based in miami Florida at Nicklaus Children's Hospital.\nHe helps children and their families to regian their health through surgery and medical interventions.\nHe is an advocate of whole food and plant-based nutrition, haviing seem dramatic improvements in health by using food as an adjunct to improve recovery after surgery and modify disease."
+            }
+          }
+        },
+        "block_order": [
+          "18fcbd89-4323-4724-9a05-5a44f088d7d1",
+          "bc42a33e-50a7-4384-8cf0-c5a096124c61",
+          "57ef52af-0609-40db-a6cf-243525bc0e09",
+          "52fe5f6d-259d-4209-9029-19da694dec83",
+          "ff44f6e3-45e9-4a9b-a4a7-0c9bf8b20992",
+          "b0dc2e9b-2c2e-406a-99ec-4b0da4e790ea",
+          "5e469003-4e64-43b8-aef7-3f0453b28549",
+          "e4c16332-94e6-4985-bc97-e1c34551b2fd",
+          "f135740c-7f86-4374-83e1-ff08ef115170",
+          "dffba600-8892-4c50-92a5-85f225dec5ea",
+          "79b9bd73-229e-4105-a044-58a7bc5c1e2a"
+        ],
+        "settings": {
+        }
+      },
+      "patient-education": {
+        "type": "patient-education",
+        "blocks": {
+          "b84d5005-6a4d-40ef-ba32-8a8a71dee74b": {
+            "type": "Resource",
+            "disabled": true,
+            "settings": {
+              "title": "Benefits of Plant-Based Eating for Kids",
+              "resource_subheadline": "A slide deck written for parents, caregivers, and older children new to plant-based eating.",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/promote-positive-body-image-kids-839295596.jpg?v=1639504885",
+              "resource_image": "shopify:\/\/shop_images\/PDF_preview.png"
+            }
+          },
+          "912a8165-401c-4c49-b2b3-22880349fa7a": {
+            "type": "Resource",
+            "disabled": true,
+            "settings": {
+              "title": "Intro to Plant-Based Eating",
+              "resource_subheadline": "A slide deck to introduce the concept of plant-based eating to an adult patient or child's caregiver.",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/sezelle_2x_31a61e0e-b743-4ff5-950e-3fa5d0b141a9.png?v=1620599261",
+              "resource_image": "shopify:\/\/shop_images\/what-is-a-plant-based-diet-beginners-guide-food-list-benefits-722x406.jpg"
+            }
+          },
+          "f1b97c04-44cf-4835-ae94-38924af26f37": {
+            "type": "Resource",
+            "disabled": true,
+            "settings": {
+              "title": "",
+              "resource_subheadline": "",
+              "resource_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "b84d5005-6a4d-40ef-ba32-8a8a71dee74b",
+          "912a8165-401c-4c49-b2b3-22880349fa7a",
+          "f1b97c04-44cf-4835-ae94-38924af26f37"
+        ],
+        "settings": {
+          "headline": "Patient Education Powerpoints",
+          "subheadline": "Downloadable slides to help you explain the benefits of a plant-based diet to your patients and their families <p style=\"color:#A4D65E\n\">Coming soon!<\/p>"
+        }
+      },
+      "formula-use-guides": {
+        "type": "formula-use-guides",
+        "blocks": {
+          "22c5a263-582f-4724-8346-48c065fcfdd8": {
+            "type": "Resource",
+            "disabled": true,
+            "settings": {
+              "title": "Pediatric Transition Guide",
+              "resource_subheadline": "To help your pediatric patient successfully start on Kate Farms",
+              "resource_url": "",
+              "resource_image": "shopify:\/\/shop_images\/iStock-590605406-difficult_patient_encounters-resized.jpg"
+            }
+          },
+          "6c46e991-a7a1-4c81-add8-74525f5018b4": {
+            "type": "Resource",
+            "disabled": true,
+            "settings": {
+              "title": "Tube Feeding 101",
+              "resource_subheadline": "To help your patient start on Kate Farms",
+              "resource_url": "",
+              "resource_image": "shopify:\/\/shop_images\/Tube-feeding-5.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "22c5a263-582f-4724-8346-48c065fcfdd8",
+          "6c46e991-a7a1-4c81-add8-74525f5018b4"
+        ],
+        "settings": {
+          "headline": "Formula Use Guides",
+          "subheadline": "Patient literature to support their use of Kate Farms formulas. <p style=\"color:#A4D65E\n\">Coming spring 2022!<\/p>"
+        }
+      },
+      "recipes": {
+        "type": "recipes",
+        "blocks": {
+          "0dedf180-c877-49c0-a44d-07baf3236ead": {
+            "type": "Resource",
+            "settings": {
+              "title": "Recipes for Kids",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Final_Pediatric_Recipe_Book.pdf?v=1641415304",
+              "resource_image": "shopify:\/\/shop_images\/PDF_Preview_3.png"
+            }
+          },
+          "27cbcbb8-e37f-49ce-bc41-c9c5560f3699": {
+            "type": "Resource",
+            "settings": {
+              "title": "Smoothie Recipes - English",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/21002_Recipes_English_4.pdf?v=1641414616",
+              "resource_image": "shopify:\/\/shop_images\/Square_preview_of_English_recipes_bb3a9d8d-d79f-4dac-a17e-d24da0b90d8f.png"
+            }
+          },
+          "82e40fb4-319d-4a03-9a24-aba66d393f23": {
+            "type": "Resource",
+            "settings": {
+              "title": "Smoothie Recipes - Spanish",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/180068_Recipes_Spanish_1.pdf?v=1641414616",
+              "resource_image": "shopify:\/\/shop_images\/Square_preview_of_Spanish_recipes_1.png"
+            }
+          }
+        },
+        "block_order": [
+          "0dedf180-c877-49c0-a44d-07baf3236ead",
+          "27cbcbb8-e37f-49ce-bc41-c9c5560f3699",
+          "82e40fb4-319d-4a03-9a24-aba66d393f23"
+        ],
+        "settings": {
+          "headline": "Recipes",
+          "subheadline": "Recipes for incorporating Kate Farms formulas into smoothies, baked goods and more, developed by our in-house dietitians."
+        }
+      },
+      "coupons": {
+        "type": "coupons",
+        "blocks": {
+          "ee23e5a8-a567-459f-a52e-5279dc84d1b3": {
+            "type": "Resource",
+            "settings": {
+              "title": "20% Coupon - English",
+              "resource_subheadline": "",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/21226_Kate_Farms_Nutrition_Community_tear_pad_20220104.pdf?v=1642048846",
+              "resource_image": "shopify:\/\/shop_images\/Untitled_Letter.png"
+            }
+          },
+          "b9510bf4-acb1-4f37-b8af-7e41a8f91281": {
+            "type": "Resource",
+            "settings": {
+              "title": "20% Coupon - Spanish",
+              "resource_subheadline": "",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/21226_Kate_Farms_Nutrition_Community_tear_pad_20220104_Spanish.pdf?v=1642048846",
+              "resource_image": "shopify:\/\/shop_images\/Untitled_Letter_1.png"
+            }
+          }
+        },
+        "block_order": [
+          "ee23e5a8-a567-459f-a52e-5279dc84d1b3",
+          "b9510bf4-acb1-4f37-b8af-7e41a8f91281"
+        ],
+        "settings": {
+          "headline": "Printable Coupons",
+          "subheadline": "Coupons with product images to indicate exactly which Kate Farms product you are recommending"
+        }
+      },
+      "product-details-resources": {
+        "type": "product-details-resources",
+        "blocks": {
+          "512fbf85-6711-40e7-8143-fab07eb0bc2e": {
+            "type": "Resource",
+            "settings": {
+              "title": "Pediatric Standard 1.2<br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Pediatric-Standard-1.2-PDS-5.25.21.png?v=1639527800",
+              "resource_image": "shopify:\/\/shop_images\/Pediatric-Standard-1.2-PDS-5.25.21.png"
+            }
+          },
+          "9044f3e2-faa9-4459-80b9-3c5f3a1abe62": {
+            "type": "Resource",
+            "settings": {
+              "title": "Pediatric Peptide 1.0 <br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Pediatric-Peptide-1.0-Vanilla-PDS-5.25.21_1.png?v=1639527684",
+              "resource_image": "shopify:\/\/shop_images\/Pediatric-Peptide-1.0-Vanilla-PDS-5.25.21_1.png"
+            }
+          },
+          "1f408a6d-b0f8-4f51-89b2-4fd7531c2bb5": {
+            "type": "Resource",
+            "settings": {
+              "title": "Pediatric Peptide 1.5<br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Pediatric-Peptide-1.5-Vanilla-PDS-5.25.21.png?v=1639527758",
+              "resource_image": "shopify:\/\/shop_images\/Pediatric-Peptide-1.5-Vanilla-PDS-5.25.21.png"
+            }
+          },
+          "98f06797-92df-4041-8733-144863ab7d05": {
+            "type": "Resource",
+            "settings": {
+              "title": "Pediatric Peptide 1.5<br>Plain",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Pediatric-Peptide-1.5-Plain-PDS-5.25.21.png?v=1639526384",
+              "resource_image": "shopify:\/\/shop_images\/Pediatric-Peptide-1.5-Plain-PDS-5.25.21.png"
+            }
+          },
+          "4e0e1375-00ac-497a-bace-96774c1e666c": {
+            "type": "Resource",
+            "settings": {
+              "title": "Standard 1.0<br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/1.0-Vanilla-PDS-5.25.2021.pdf?v=1639525615",
+              "resource_image": "shopify:\/\/shop_images\/PDF_preview.png"
+            }
+          },
+          "ff711d4d-3b66-443c-98c3-a28f0c8a8d6a": {
+            "type": "Resource",
+            "settings": {
+              "title": "Standard 1.0<br>Chocolate",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/20210426_Standard1.0_Chocolate_F2_ProductDetailSheet.png?v=1639527666",
+              "resource_image": "shopify:\/\/shop_images\/20210426_Standard1.0_Chocolate_F2_ProductDetailSheet.png"
+            }
+          },
+          "28fe6f56-414e-4395-a5db-fbee6e81814c": {
+            "type": "Resource",
+            "settings": {
+              "title": "Standard 1.0<br>Plain",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/20210127_Standard1.0_Plain_F1_ProductDetailSheet-R03V01-DV-1.pdf?v=1639527948",
+              "resource_image": "shopify:\/\/shop_images\/1.4-Plain-PDS-5.25.21.png"
+            }
+          },
+          "cf4bd85a-d996-4978-a72b-7f493f23986b": {
+            "type": "Resource",
+            "settings": {
+              "title": "Standard 1.4<br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/1.4-Vanila-PDS-5.25.21_4240122b-ebe1-48dd-8de9-611ea437b523.pdf?v=1639527948",
+              "resource_image": "shopify:\/\/shop_images\/20210426_Standard1.4_Vanilla_F1_ProductDetailSheet.png"
+            }
+          },
+          "4e465b2e-7c35-40cb-b6da-97553747bcb6": {
+            "type": "Resource",
+            "settings": {
+              "title": "Standard 1.4<br>Plain",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/1.4-Plain-PDS-5.25.21.pdf?v=1639525615",
+              "resource_image": "shopify:\/\/shop_images\/1.4-Plain-PDS-5.25.21.png"
+            }
+          },
+          "59a7e7fb-4606-4b42-8a5c-7ea5e0495615": {
+            "type": "Resource",
+            "settings": {
+              "title": "Peptide 1.0<br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Peptide-1.0-Vanilla-PDS-5.25.21.pdf?v=1639527948",
+              "resource_image": "shopify:\/\/shop_images\/Peptide-1.0-Vanilla-PDS-5.25.21.png"
+            }
+          },
+          "8f92e50d-4093-4b8c-ae1d-805b85f9c1f8": {
+            "type": "Resource",
+            "settings": {
+              "title": "Peptide 1.0<br>Plain",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Peptide-1.0-Plain-PDS-5.25.21.png?v=1639527834",
+              "resource_image": "shopify:\/\/shop_images\/Peptide-1.0-Plain-PDS-5.25.21.png"
+            }
+          },
+          "84e49829-8ca6-4757-89f2-7be4ec0ef490": {
+            "type": "Resource",
+            "settings": {
+              "title": "Peptide 1.5<br>Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Peptide-1.5-Vanilla-PDS-5.25.21.png?v=1639527895",
+              "resource_image": "shopify:\/\/shop_images\/Peptide-1.5-Vanilla-PDS-5.25.21.png"
+            }
+          },
+          "f258fc85-b5c0-4391-adea-0e9b395eb2f9": {
+            "type": "Resource",
+            "settings": {
+              "title": "Peptide 1.5<br>Plain",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/Peptide-1.5-Plain-PDS-5.25.21.png?v=1639527877",
+              "resource_image": "shopify:\/\/shop_images\/Peptide-1.5-Plain-PDS-5.25.21.png"
+            }
+          },
+          "2c6ea8e2-6950-4238-bcfd-ea061289d85f": {
+            "type": "Resource",
+            "settings": {
+              "title": "Nutrition Shake",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/20210426_NutritionShake_ProductDetailSheet.png?v=1639527640",
+              "resource_image": "shopify:\/\/shop_images\/20210426_NutritionShake_ProductDetailSheet.png"
+            }
+          },
+          "b81006bd-7cad-449f-8759-d03402f3677d": {
+            "type": "Resource",
+            "settings": {
+              "title": "Renal Support 1.8 Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/20220106_Renal-1.8_Vanilla_F1_Retail_ProductDetailSheet.pdf?v=1644963832",
+              "resource_image": "shopify:\/\/shop_images\/20220106_Renal-1.8_Vanilla_F1_Retail_ProductDetailSheet_1.png"
+            }
+          },
+          "b4132704-c0cc-4f78-93be-8516d8212ea0": {
+            "type": "Resource",
+            "settings": {
+              "title": "Glucose Support 1.2 Vanilla",
+              "resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0552\/7103\/0961\/files\/20220106_Glucose-1.2_Vanilla_F1_Retail_ProductDetailSheet.png?v=1644964371",
+              "resource_image": "shopify:\/\/shop_images\/20220106_Glucose-1.2_Vanilla_F1_Retail_ProductDetailSheet.png"
+            }
+          }
+        },
+        "block_order": [
+          "512fbf85-6711-40e7-8143-fab07eb0bc2e",
+          "9044f3e2-faa9-4459-80b9-3c5f3a1abe62",
+          "1f408a6d-b0f8-4f51-89b2-4fd7531c2bb5",
+          "98f06797-92df-4041-8733-144863ab7d05",
+          "4e0e1375-00ac-497a-bace-96774c1e666c",
+          "ff711d4d-3b66-443c-98c3-a28f0c8a8d6a",
+          "28fe6f56-414e-4395-a5db-fbee6e81814c",
+          "cf4bd85a-d996-4978-a72b-7f493f23986b",
+          "4e465b2e-7c35-40cb-b6da-97553747bcb6",
+          "59a7e7fb-4606-4b42-8a5c-7ea5e0495615",
+          "8f92e50d-4093-4b8c-ae1d-805b85f9c1f8",
+          "84e49829-8ca6-4757-89f2-7be4ec0ef490",
+          "f258fc85-b5c0-4391-adea-0e9b395eb2f9",
+          "2c6ea8e2-6950-4238-bcfd-ea061289d85f",
+          "b81006bd-7cad-449f-8759-d03402f3677d",
+          "b4132704-c0cc-4f78-93be-8516d8212ea0"
+        ],
+        "settings": {
+          "headline": "Product Detail Sheets",
+          "subheadline": "Ingredient and nutrition information, applications and features, and product specifications for each of our formulas."
+        }
+      },
+      "main-navigation": {
+        "type": "main-navigation",
+        "settings": {
+        }
+      },
+      "faqs-hero": {
+        "type": "faqs-hero",
+        "settings": {
+          "background_color": "#ffffff",
+          "headline": "Frequently Asked Questions",
+          "subheadline": "<p>We are here to support you. If your questions are not answered by the FAQs below, please send us a message at <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a>.<\/p>",
+          "heading_color": ""
+        }
+      },
+      "resources-hero-v2": {
+        "type": "resources-hero-v2",
+        "settings": {
+          "background_color": "#ffffff",
+          "headline": "Resources to help you<br> help your patients",
+          "subheadline": "<p>This is your one stop shop for downloadable patient literature. From educational powerpoint slides to recipes and coupons, we've got you covered. Some items are also available to order in print for your practice. To order printed versions, please visit the <a href=\"https:\/\/nutritioncommunity.katefarms.com\/collections\">Order<\/a> page.<\/p>",
+          "heading_color": ""
+        }
+      },
+      "faqs-question-and-answers": {
+        "type": "faqs-question-and-answers",
+        "blocks": {
+          "3e714017-6667-4feb-8dc3-8f2d411eb693": {
+            "type": "FAQ",
+            "settings": {
+              "title": "What is the best way to utilize the Kate Farms Nutrition Community program?",
+              "answer": "The Kate Farms Nutrition Community program and offerings are designed to provide you with everything you need to talk about the benefits of a plant-based diet and to recommend Kate Farms when seeing patients at your practice. Everything is available to <a href=\"https:\/\/nutritioncommunity.katefarms.com\/collections\">order<\/a> and ship right to your facility, download digitally, or both! <br><br>We recommend getting started by ordering a few cases of the formulas you will recommend most so that you always have a carton on hand to provide to a patient. Compliment that sample with a coupon from our recommendation tear pad so that you can provide your patients with a discount on their first katefarms.com order. Next, check out the patient literature available to order in print or download from our <a href=\"https:\/\/nutritioncommunity.katefarms.com\/pages\/patient-literature\">Patient Literature<\/a> section. All PDFs can be downloaded, printed, or emailed to your patient. Before logging out for the day, scan through our <a href=\"https:\/\/nutritioncommunity.katefarms.com\/pages\/medical-education\">Medical Education<\/a> offerings. New courses will be added regularly, and you can earn 1 CEU credit for every course completed. <br>\n<br>Have ideas for resources that would be helpful for your practice? Send us a suggestion at <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a>. We are always looking for ways to support you!"
+            }
+          },
+          "351c4d5f-1d6d-46be-9531-1b6f94ec1df1": {
+            "type": "FAQ",
+            "settings": {
+              "title": "Can I order samples to ship directly to my patient?",
+              "answer": "Yes, but not through Kate Farms Nutrition Community. To ensure your patient's contact information is secure, we ask that you use our <a href=\"https:\/\/www.katefarms.com\/for-clinicians\/request-samples\/\">patient sample request form<\/a> at katefarms.com to order samples to ship directly to your patient. The Kate Farms Nutrition Community sample program is intended to supply samples for your practice only."
+            }
+          },
+          "54a66add-ddce-4f24-89a2-8ad52c1f1bec": {
+            "type": "FAQ",
+            "settings": {
+              "title": "I just placed my order; can I cancel or change it?",
+              "answer": "To ensure timely delivery, orders placed through the Kate Farms Nutrition Community Program portal are processed and shipped as quickly as possible. If you have ordered something you do not need and would like to cancel that portion of your order, please send us an email at <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a> and we can coordinate a return from your facility."
+            }
+          },
+          "04cc7ced-f577-4215-b393-27242197a573": {
+            "type": "FAQ",
+            "settings": {
+              "title": "Can I track my order?",
+              "answer": "Yes! You will receive a confirmation email when your order has been placed, and a second notification with tracking information when your order has shipped. You can also view your order history and tracking information by visiting <a href=\"https:\/\/nutritioncommunity.katefarms.com\/account\">My Account.<\/a>"
+            }
+          },
+          "d28e321f-b936-4912-84a5-2d40bff23a20": {
+            "type": "FAQ",
+            "settings": {
+              "title": "Where can my patients buy Kate Farms formulas?",
+              "answer": "Kate Farms formulas are available for purchase 24\/7 at <a href=\"https:\/\/www.katefarms.com\/\">katefarms.com<\/a> and <a href=\"https:\/\/www.amazon.com\/stores\/Kate+Farms\/page\/CACAA8EF-B651-4525-A60D-0B0F21A134AF?ref_=ast_bln\">Amazon.com<\/a>. Our products are not available in supermarkets or retail locations at this time."
+            }
+          },
+          "e6bc205e-e43b-4814-8300-f32ec1591bcc": {
+            "type": "FAQ",
+            "settings": {
+              "title": "I have a dedicated Kate Farms Territory Manager; how does this program differ from what my Territory Manager provides?",
+              "answer": "Kate Farms Territory Managers are primarily focused on providing support to clinicians in GI specialties and driving access to Kate Farms formulas for patients with insurance coverage. If you already have a dedicated Territory Manager, consider them your #1 resource for all things Kate Farms. The Kate Farms Nutrition Community can act as a supplement to the services and resources that your Territory Manager provides.<br><br>\nInterested in speaking with a Territory Manager about our formulas? Send us a note at <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a> and we will connect you."
+            }
+          }
+        },
+        "block_order": [
+          "3e714017-6667-4feb-8dc3-8f2d411eb693",
+          "351c4d5f-1d6d-46be-9531-1b6f94ec1df1",
+          "54a66add-ddce-4f24-89a2-8ad52c1f1bec",
+          "04cc7ced-f577-4215-b393-27242197a573",
+          "d28e321f-b936-4912-84a5-2d40bff23a20",
+          "e6bc205e-e43b-4814-8300-f32ec1591bcc"
+        ],
+        "settings": {
+          "headline": ""
+        }
+      },
+      "medical-education-hero": {
+        "type": "medical-education-hero",
+        "settings": {
+          "background_color": "",
+          "headline": "Medical Education",
+          "subheadline": "<p>We are excited to offer you exclusive access to on-demand medical education offerings. Follow the links below to register for and view your selection. You will be emailed your certificate at the end of the month. These selections rotate! Check back every quarter for new topics.<\/p>",
+          "heading_color": ""
+        }
+      },
+      "general-topics-accordions": {
+        "type": "general-topics-accordions",
+        "blocks": {
+          "8f084a42-b708-499c-9361-c458adc11190": {
+            "type": "general",
+            "settings": {
+              "title": "Plant-Based Peptides: Sources and Clinical Applications – What the Clinician Needs to Know",
+              "body": "What are peptides and how are plant-based peptides sourced for enteral formulas? This program examines the emergence of plant-based protein ingredients, and their quality, safety and efficacy, highlighting pea protein. Explore the clinical applications for use of plant-based peptide formulas, and the functionality of peptides, including protein nutriture and absorption, along with allergenicity and taste.",
+              "level": "1 & 2",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/763639828060657679"
+            }
+          },
+          "2f1a663d-62b1-4f14-be95-d81ac9b6f0fb": {
+            "type": "general",
+            "settings": {
+              "title": "Food, the Gut, and Immunity: How Nutrition Shapes the Developing Immune System",
+              "body": "Both maternal and paternal dietary and nutritional factors influence a myriad of conditions that set in motion the foundation for optimizing gastrointestinal health and influencing immune tolerance-intolerance in an individual. This lecture will explore this subject and how optimal enteral nutrition promotes immune development to ideally support long term health and well-being.",
+              "level": "1 & 2",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/8338124848855170822"
+            }
+          },
+          "ec7cf513-f4da-4dfe-a40d-ceb2cbe00312": {
+            "type": "general",
+            "settings": {
+              "title": "History and Benefits of Plant-Based Nutrition",
+              "body": "Plant-based diets and formulas are gaining in popularity and new research is emerging. This presentation will review history, current trends, benefits, and new research in plant-based diets and formulas.",
+              "level": "1 & 2",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/8089980466854807814"
+            }
+          },
+          "94e2f936-6de9-4c27-92f6-e5435f0d4283": {
+            "type": "general",
+            "settings": {
+              "title": "Diabetes: More Than Just Carb Counting",
+              "body": "Is a vegan diet the new cure for Diabetes? What is the role of inflammation and the gut microbiome? Explore hot topics and new research within evidenced-based practice. Topics include plant-based diets, phytonutrients and oxidative stress, bariatrics, artificial sweeteners and the gut microbiome, dietary fiber, optimal exercise, and clinical applications in diabetes care.",
+              "level": "1 & 2",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/7719298825325369613"
+            }
+          }
+        },
+        "block_order": [
+          "8f084a42-b708-499c-9361-c458adc11190",
+          "2f1a663d-62b1-4f14-be95-d81ac9b6f0fb",
+          "ec7cf513-f4da-4dfe-a40d-ceb2cbe00312",
+          "94e2f936-6de9-4c27-92f6-e5435f0d4283"
+        ],
+        "settings": {
+          "headline": ""
+        }
+      },
+      "pediatric-focused-topics-accordions": {
+        "type": "pediatric-focused-topics-accordions",
+        "blocks": {
+          "10523ffb-7172-4702-9f8b-ab42a5f4dc7b": {
+            "type": "general",
+            "settings": {
+              "title": "Benefits & Utilization of a Plant-Based Diet in Pediatrics",
+              "body": "The target audience for this presentation includes dietitians who work with pediatric patients and who are interested in learning about how to apply a plant-based diet to this population in an effective and evidence-based approach. This information can be applied to the general pediatric population as well as those who are fed via feeding tube.",
+              "level": "1",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/5764936684514818319"
+            }
+          },
+          "449ed8fb-4a49-45a5-9a07-552cdf2d6b76": {
+            "type": "general",
+            "settings": {
+              "title": "Review of Recent Literature: Pediatric Malnutrition",
+              "body": "Background on pediatric malnutrition and recent findings from published academic articles. Topics covered include pediatric malnutrition screening and diagnosis, and descriptions of the various tools available. Conclusion of literature and potential next steps in clinical practice with insights as to how to implement a protocol.",
+              "level": "1",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/2460252230816866061"
+            }
+          },
+          "f7cc30f8-3ef1-421c-a05f-e649161258fa": {
+            "type": "general",
+            "settings": {
+              "title": "Intestinal Permeability In Pediatrics",
+              "body": "Introductory information for dietitians on intestinal permeability pathology and diagnosis in different types of pediatric patients. Explains the relationship between food allergies, food sensitivities, and intestinal permeability specific to pediatric patients. Pediatric conditions discussed include cow’s milk allergy, IBS, functional abdominal pain, and autism. Nutritional therapy to address increased intestinal permeability is also reviewed.",
+              "level": "1 & 2",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/8968909168591081986"
+            }
+          },
+          "013fc5f4-e83f-412f-b946-30102d72d56f": {
+            "type": "general",
+            "settings": {
+              "title": "Optimizing Nutrition in Eosinophilic Esophagitis",
+              "body": "This webinar, intended for registered dietitians or other medical professionals, will provide a general overview of eosinophilic esophagitis and how to diagnose this disease in pediatric patients as well as options for nutritional management. The discussion will include tips on educating families to help reduce anxiety, behaviors that may be a sign of feeding difficulties, and resources available for practitioners and families.",
+              "level": "1 & 2",
+              "hours": "1.0",
+              "link": "https:\/\/attendee.gotowebinar.com\/recording\/1921317822756173313"
+            }
+          }
+        },
+        "block_order": [
+          "10523ffb-7172-4702-9f8b-ab42a5f4dc7b",
+          "449ed8fb-4a49-45a5-9a07-552cdf2d6b76",
+          "f7cc30f8-3ef1-421c-a05f-e649161258fa",
+          "013fc5f4-e83f-412f-b946-30102d72d56f"
+        ],
+        "settings": {
+          "headline": ""
+        }
+      },
+      "dashboard-sections": {
+        "type": "dashboard-sections",
+        "blocks": {
+          "80e4084f-58c9-4115-93ba-d54dd647980f": {
+            "type": "Section",
+            "settings": {
+              "title": "Order Samples",
+              "body_text": "Request samples for your practice. Ship free samples directly to your practice for you to distribute to your patients as you see fit. <br><br>",
+              "link": "\/collections",
+              "link_text": "Order Formula Samples",
+              "section_image": "shopify:\/\/shop_images\/shakes.png",
+              "icon": false,
+              "background_color": "#dbe7fd"
+            }
+          },
+          "e2766d4b-5898-40c8-b761-45a7d5a62768": {
+            "type": "Section",
+            "settings": {
+              "title": "Order Office Resources",
+              "body_text": "Request hard copies of Kate Farms materials to have on hand at your practice. <br><br><br>",
+              "link": "shopify:\/\/collections\/patient-resources",
+              "link_text": "Order Resources",
+              "section_image": "shopify:\/\/shop_images\/books.png",
+              "icon": false,
+              "background_color": "#f6e8f9"
+            }
+          },
+          "0dca9bf5-8f42-42e2-850a-670a4f845ebd": {
+            "type": "Section",
+            "settings": {
+              "title": "Medical Education",
+              "body_text": "Exclusive access to on-demand medical education offerings. <br><br><br>",
+              "link": "shopify:\/\/pages\/medical-education",
+              "link_text": "Access Offerings",
+              "section_image": "shopify:\/\/shop_images\/laptop-icon.png",
+              "icon": true,
+              "background_color": "#e2efd7"
+            }
+          },
+          "ba461cac-1047-4f7a-8e76-79622263ff2b": {
+            "type": "Section",
+            "settings": {
+              "title": "Downloadable Literature",
+              "body_text": "Download recipes, coupons, and product information to send to patients online, or print for your practice.<br><br><br>",
+              "link": "shopify:\/\/pages\/patient-literature",
+              "link_text": "Browse Literature",
+              "section_image": "shopify:\/\/shop_images\/bear.png",
+              "icon": true,
+              "background_color": "#dae1fb"
+            }
+          }
+        },
+        "block_order": [
+          "80e4084f-58c9-4115-93ba-d54dd647980f",
+          "e2766d4b-5898-40c8-b761-45a7d5a62768",
+          "0dca9bf5-8f42-42e2-850a-670a4f845ebd",
+          "ba461cac-1047-4f7a-8e76-79622263ff2b"
+        ],
+        "settings": {
+        }
+      },
+      "dashboard-faqs": {
+        "type": "dashboard-faqs",
+        "blocks": {
+          "30bb1dae-aff0-48d9-859e-7b51fdabfae7": {
+            "type": "FAQ",
+            "settings": {
+              "title": "What is the best way to utilize the Kate Farms Nutrition Community program?",
+              "answer": "The Kate Farms Nutrition Community program and offerings are designed to provide you with everything you need to talk about the benefits of a plant-based diet and to recommend Kate Farms when seeing patients at your practice. Everything is available to <a href=\"https:\/\/nutritioncommunity.katefarms.com\/collections\">order<\/a> and ship right to your facility, download digitally, or both! <br><br>We recommend getting started by ordering a few cases of the formulas you will recommend most so that you always have a carton on hand to provide to a patient. Compliment that sample with a coupon from our recommendation tear pad so that you can provide your patients with a discount on their first katefarms.com order. Next, check out the patient literature available to order in print or download from our <a href=\"https:\/\/nutritioncommunity.katefarms.com\/pages\/patient-literature\">Patient Literature<\/a> section. All PDFs can be downloaded, printed, or emailed to your patient. Before logging out for the day, scan through our <a href=\"https:\/\/nutritioncommunity.katefarms.com\/pages\/medical-education\">Medical Education<\/a> offerings. New courses will be added regularly, and you can earn 1 CEU credit for every course completed. <br>\n<br>Have ideas for resources that would be helpful for your practice? Send us a suggestion at <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a>. We are always looking for ways to support you!"
+            }
+          },
+          "6ef399fb-1fdb-423e-afa5-d08e15e37ca9": {
+            "type": "FAQ",
+            "settings": {
+              "title": "Can I order samples to ship directly to my patient?",
+              "answer": "Yes, but not through Kate Farms Nutrition Community. To ensure your patient's contact information is secure, we ask that you use our <a href=\"https:\/\/www.katefarms.com\/for-clinicians\/request-samples\/\">patient sample request form<\/a> at katefarms.com to order samples to ship directly to your patient. The Kate Farms Nutrition Community sample program is intended to supply samples for your practice only."
+            }
+          },
+          "e7f2e530-75c4-4fd0-937f-7c39c0a5e54c": {
+            "type": "FAQ",
+            "settings": {
+              "title": "I just placed my order; can I cancel or change it?",
+              "answer": "To ensure timely delivery, orders placed through the Kate Farms Nutrition Community Program portal are processed and shipped as quickly as possible. If you have ordered something you do not need and would like to cancel that portion of your order, please send us an email at <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a> and we can coordinate a return from your facility."
+            }
+          },
+          "f53726aa-5c52-43b9-8c3e-7034649619d0": {
+            "type": "FAQ",
+            "disabled": true,
+            "settings": {
+              "title": "How long will it take to receive my invite email?",
+              "answer": "Once your application is approved, you will immediately receive your invite email. If you haven't received your email invite in 7-10 business days, please reach out to <a href=\"mailto:%20nutritioncommunity@katefarms.com\">nutritioncommunity@katefarms.com<\/a>"
+            }
+          },
+          "f20e8b0c-ab11-46aa-bb6a-0b8638a4513c": {
+            "type": "FAQ",
+            "disabled": true,
+            "settings": {
+              "title": "What if I’m not a registered dietitian currently affiliated with a healthcare organization?",
+              "answer": "Currently, we are only able to accept active registered dietitians that are affiliated with a healthcare organization. We encourage dietetic students and interns to apply once they receive their credentials."
+            }
+          },
+          "37d841c7-1365-4447-ad4c-6e684c89b2e9": {
+            "type": "FAQ",
+            "disabled": true,
+            "settings": {
+              "title": "How long does it usually take to hear back about an application?",
+              "answer": "Applications are processed within 7-10 business days."
+            }
+          }
+        },
+        "block_order": [
+          "30bb1dae-aff0-48d9-859e-7b51fdabfae7",
+          "6ef399fb-1fdb-423e-afa5-d08e15e37ca9",
+          "e7f2e530-75c4-4fd0-937f-7c39c0a5e54c",
+          "f53726aa-5c52-43b9-8c3e-7034649619d0",
+          "f20e8b0c-ab11-46aa-bb6a-0b8638a4513c",
+          "37d841c7-1365-4447-ad4c-6e684c89b2e9"
+        ],
+        "settings": {
+          "headline": ""
+        }
+      },
+      "product-specifications": {
+        "type": "product-specifications",
+        "settings": {
+        }
+      },
+      "presenters": {
+        "type": "presenters",
+        "blocks": {
+          "77263074-4d04-4e24-9eed-c148872e07ac": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/Susie-3_6.jpg",
+              "presenter_name": "Susie Ray",
+              "presenter_role": "MS, RDN, CNSC, CDCES",
+              "presenter_description": "Susie’s experience encompasses adult acute care, program management, community nutrition, and outpatient care in pediatric and adult patients. Prior to coming to Kate Farms, she operated her own private practice that provided home visits with an emphasis on obesity and diabetes management. She is currently one of the Clinical Science Liaisons at Kate Farms."
+            }
+          },
+          "b393f742-eaa7-4788-b4b0-51afc162f167": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/debora_2x_e89de148-5374-4e56-a58b-d91d80ab605b.png",
+              "presenter_name": "Debora Duro",
+              "presenter_role": "MD, MS",
+              "presenter_description": "Debora Calisto is a physician, philanthropist, and educator.\nHe is a pediatric surgeon trained at the University of Pittsburgh and currently based in miami Florida at Nicklaus Children's Hospital.\nHe helps children and their families to regian their health through surgery and medical interventions.\nHe is an advocate of whole food and plant-based nutrition, haviing seem dramatic improvements in health by using food as an adjunct to improve recovery after surgery and modify disease."
+            }
+          },
+          "29158886-0e95-4913-b0c0-9f871be89e61": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/Alexia-Beauregard.png",
+              "presenter_name": "Alexia Beauregard",
+              "presenter_role": "MS, RD, CSP",
+              "presenter_description": "Alexia Beauregard is a food allergy specialist dietitian who also specializes in GI disorders and eating and feeding difficulties in children and adults. She obtained her Master’s degree in Human Nutrition from Winthrop University. Alexia is a member of AAAAI, ACAAI, and INDANA where her work focuses on health care provider education to raise awareness about food allergy and its impact on quality of life. Her publications address eating issues in children and include how to identify problematic feeding behaviors and management strategies. She is a faculty member of the Ellyn Satter Institute, a member of the medical advisory board for The FPIES Foundation, and is the Chief of the Clinical Dietetics Branch at Winn Army Community Hospital at Fort Stewart, GA. When she is not working, you can find Alexia, her husband, 3 children and Boykin Spaneil on a beach or a sailboat."
+            }
+          },
+          "3d837f78-8eaf-48b6-ae60-7d56bdb7e824": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/Dwan-Newman-768x1024.jpg",
+              "presenter_name": "Dwan Newman",
+              "presenter_role": "RD, LDN, CNSC",
+              "presenter_description": "Dwan’s clinical experience is primarily in the pediatric inpatient and outpatient settings, specifically with Gastroenterology Hepatology and Nutrition. She is currently a Clinical Science Liaison at Kate Farms."
+            }
+          },
+          "00bbd5dc-e3f8-4554-a05e-a943f89afaad": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/Belinda-Jenks-1-768x740.jpg",
+              "presenter_name": "Belinda H. Jenks",
+              "presenter_role": "PhD, MAg, RDN",
+              "presenter_description": "Belinda H. Jenks, PhD, RDN holds a doctorate in Nutrition and Biochemistry from UCLA, a Master of Agriculture and Human Nutrition from the University of Florida and a Bachelor of Science degree from Drexel University. As a Nutrition Scientist and Registered Dietitian Nutritionist she has significant experience in the plant-based protein metabolism and phytonutrients categories. Currently Belinda is the Director of Nutrition Science at Kate Farms."
+            }
+          },
+          "77cc2428-1b43-41a9-a004-065a9b687a6a": {
+            "type": "presenter",
+            "settings": {
+              "presenter_image": "shopify:\/\/shop_images\/Geri-Brewster.jpg",
+              "presenter_name": "Geri Brewster",
+              "presenter_role": "MPH, RD",
+              "presenter_description": "Geri Brewster, MPH, RD is a nutrition consultant in private practice, focused on gastro-neuro-immune related issues and allergies-sensitivities in children and adults. She holds a MPH from New York Medical College and a BS in Human Nutrition and Foods from Virginia Tech. Geri founded Somavance, LLC in 2011 for preconception preparedness and developed Build Your Best Bump, providing guidance and dietary protocols to improve pre-pregnancy health."
+            }
+          }
+        },
+        "block_order": [
+          "77263074-4d04-4e24-9eed-c148872e07ac",
+          "b393f742-eaa7-4788-b4b0-51afc162f167",
+          "29158886-0e95-4913-b0c0-9f871be89e61",
+          "3d837f78-8eaf-48b6-ae60-7d56bdb7e824",
+          "00bbd5dc-e3f8-4554-a05e-a943f89afaad",
+          "77cc2428-1b43-41a9-a004-065a9b687a6a"
+        ],
+        "settings": {
+          "show_section": false
+        }
+      }
+    },
+    "content_for_index": [
+      "1594220600389",
+      "1594220270254",
+      "collection-list",
+      "1594133782983"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-list-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "collection-list-1": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "collection-list-2": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "collection-list-0",
+            "collection-list-1",
+            "collection-list-2"
+          ],
+          "settings": {
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "collection-list",
+        "featured-collection",
+        "featured-product"
+      ]
+    }
+  }
+}

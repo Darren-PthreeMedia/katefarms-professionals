@@ -1,0 +1,55 @@
+<section class="faqs-q-and-a-section">
+  <div class="container">
+    <div class="faq-accordion-container">
+      <h2>Frequently Asked Questions</h2>
+      <hr/>
+      <div class="accordion-container dashboardFAQs" targetForJS="dashboardFAQs" >
+        {% for block in section.blocks %} 
+          <div class="ac">
+              <h2 class="ac-header">
+                <button class="ac-trigger"><span>{{ block.settings.title }}</span></button>
+              </h2>
+              <div class="ac-panel">
+                <p class="ac-text">{{ block.settings.answer }}</p>
+              </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="view-dashboard-faqs">
+    <a href="/pages/faqs" class="btn">View Full FAQ</a>
+</div>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "settings": [
+    {
+      "label": "Headline",
+      "id": "headline",
+      "type": "text"
+    }      
+  ],
+  "blocks": [
+    {
+      "type": "FAQ",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Answer",
+          "id": "answer"
+        }        
+      ]
+    }
+  ]
+}
+{% endschema %}

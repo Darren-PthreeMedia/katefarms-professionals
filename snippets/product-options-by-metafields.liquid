@@ -1,0 +1,57 @@
+{%- for option in all_options -%}
+  {%- assign o = option | split: '#' -%}
+
+  {%- assign order = o[0] -%}
+  {%- assign current_title = o[1] -%}
+  {%- assign url = o[2] -%}
+  {%- assign subtext = o[3] -%}
+
+  {%- assign is_current_variant = false -%}
+
+  {%- if current_title == flavor -%}
+    {%- assign is_current_variant = true -%}
+  {%- endif -%}
+
+  {%- capture tag -%}
+
+    {%- if is_current_variant -%}
+
+      <span class="product-select active">
+        {{ current_title }}
+      </span>
+
+    {%- else -%}
+
+      {%- if url == blank -%}
+        <span class="product-select product-select--unavailable relative text-ada-gray cursor-not-allowed border-ada-gray bg-gray-100">
+          {{ current_title }}
+
+          <span class="absolute top-full mt-1 leading-tight text-sm font-medium text-center block text-current inset-x-0 insetx0">
+            {{ subtext }}
+          </span>
+        </span>
+
+      {%- else -%}
+
+        <a href="{{ url }}" class="product-select">
+          {{ current_title }}
+        </a>
+
+      {%- endif -%}
+
+    {%- endif -%}
+
+  {%- endcapture -%}
+
+  <div class="product-select-wrap px-2 pb-6">
+    {{ tag }}
+  </div>
+
+  {% comment %}
+
+  Reset our "current_title" for the no-js variant down below
+
+  {% endcomment %}
+
+  {%- assign current_title = nil -%}
+{%- endfor -%}

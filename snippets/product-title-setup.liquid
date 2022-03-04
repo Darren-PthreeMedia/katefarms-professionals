@@ -1,0 +1,15 @@
+{%- assign item_title = item.product.title -%}
+
+{%- if item.product.metafields.katefarms.product_listing_title -%}
+  {%- assign item_title = item.product.metafields.katefarms.product_listing_title -%}
+{%- endif -%}
+
+{%- if item.product.metafields.subscriptions.original_handle != blank -%}
+  {%- assign h = item.product.metafields.subscriptions.original_handle -%}
+
+  {%- assign p = all_products[h] -%}
+
+  {%- unless p == empty -%}
+    {%- assign item_title = all_products[h].metafields.katefarms.product_listing_title -%}
+  {%- endunless -%}
+{%- endif -%}

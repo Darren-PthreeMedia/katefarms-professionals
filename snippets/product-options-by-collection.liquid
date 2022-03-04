@@ -1,0 +1,44 @@
+{%- for option in collections[key].products -%}
+  {%- comment %}<locksmith:20a5>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: option, subject_parent: collections[key], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:20a5>{% endcomment -%}
+  {%- capture current_title -%}
+    {%- if option.metafields.katefarms.product_flavor != blank -%}
+      {{ option.metafields.katefarms.product_flavor }}
+    {%- else -%}
+      {{ option.title }}
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- assign is_current_variant = false -%}
+
+  {%- if option.handle == product.handle -%}
+    {%- assign is_current_variant = true -%}
+  {%- endif -%}
+
+  {%- capture tag -%}
+
+    {%- if is_current_variant -%}
+      <span class="product-select active">
+        {{ current_title }}
+      </span>
+    {%- else -%}
+      <a href="{{ option.url }}" class="product-select">
+        {{ current_title }}
+      </a>
+    {%- endif -%}
+
+  {%- endcapture -%}
+
+  <div class="product-select-wrap px-2 pb-4">
+    {{ tag }}
+  </div>
+
+  {% comment %}
+
+  Reset our "current_title" for the no-js variant down below
+
+  {% endcomment %}
+
+  {%- assign current_title = nil -%}
+{%- endfor -%}

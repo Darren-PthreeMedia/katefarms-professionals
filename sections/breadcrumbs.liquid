@@ -1,0 +1,187 @@
+{% include 'shop-urls-init' %}
+
+{%- assign position = 3 -%}
+
+{%- capture delimiter -%}
+<span class="delimiter"> › </span>
+{%- endcapture -%}
+
+<div class="container">
+<div
+  class="breadcrumbs "
+  typeof="BreadcrumbList"
+  vocab="https://schema.org/"
+>
+  <span
+    property="itemListElement"
+    typeof="ListItem"
+  >
+    <a
+      property="item"
+      typeof="WebPage"
+      title="Go to Kate Farms."
+      href="/collections"
+      class="home"
+    >
+      <span property="name">
+        Home
+      </span>
+    </a>
+
+    <meta
+      property="position"
+      content="1"
+    >
+  </span>
+
+  {{ delimiter }}
+
+  <span
+    property="itemListElement"
+    typeof="ListItem"
+  >
+    <a
+      property="item"
+      typeof="WebPage"
+      title="Go to Kate Farms Shop"
+      href="/collections/all"
+      class="shop"
+    >
+      <span
+        property="name"
+        class="post post-page"
+      >
+        All Products
+      </span>
+    </a>
+
+    <meta
+      property="position"
+      content="2"
+    >
+
+  </span>
+
+  {%- if template contains 'product' -%}
+
+    {%- if collection -%}
+
+      <span
+        property="itemListElement"
+        typeof="ListItem"
+      >
+        <a
+          property="item"
+          typeof="WebPage"
+          title="Go to {{ collection.name }}"
+          href="{{ collection.url }}"
+          class="breadcrumb-{{ collection.handle }}"
+        >
+          <span property="name">
+            {{ collection.name }}
+          </span>
+        </a>
+
+        <meta
+          property="position"
+          content="{{ position }}"
+        >
+      </span>
+
+      {%- assign position = position | plus: 1 -%}
+
+    {%- endif -%}
+
+    {{ delimiter }}
+
+    <span
+      property="itemListElement"
+      typeof="ListItem"
+    >
+      <span
+        property="name"
+        class="post post-page current-item"
+      >
+        {{ product.title }}
+      </span>
+
+      <meta
+        property="url"
+        content="{{ product.url | within: collection }}"
+      >
+
+      <meta
+        property="position"
+        content="{{ position }}"
+      ></span>
+    </span>
+  {%- endif -%}
+
+
+  {%- if template contains 'customers' -%}
+
+    {{ delimiter }}
+
+    <span
+      property="itemListElement"
+      typeof="ListItem"
+    >
+      <a
+        property="item"
+        typeof="WebPage"
+        title="Go to Account Page"
+        href="/account"
+        class="shop"
+      >
+        <span
+          property="name"
+          class="post post-page"
+        >
+          {{ 'customer.account.title' | t }}
+        </span>
+      </a>
+
+      <meta
+        property="position"
+        content="2"
+      >
+
+    </span>
+  {%- endif -%}
+
+
+</div>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Breadcrumbs",
+    "class": "has-white-background-color py-8",
+    "blocks": [
+      {
+        "type": "breadcrumb",
+        "name": "Breadcrumb",
+        "settings": [
+          {
+            "type": "url",
+            "label": "Link",
+            "id": "link"
+          },
+          {
+            "type": "text",
+            "label": "Text",
+            "id": "text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Breadcrumbs",
+        "category": "Layout"
+      }
+    ]
+  }
+{% endschema %}

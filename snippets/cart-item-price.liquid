@@ -1,0 +1,14 @@
+{% if item.original_line_price != item.line_price %}
+  <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
+  <span class="block text-green">
+  {{ item.price | money }}
+  </span>
+  <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
+  <span class="price-strikethrough block text-gray">
+  <s>{{ item.original_price | money }}</s>
+  </span>
+{% else %}
+  <div class="text-sm md:text-base">
+  {{ item.price | money }}
+  </div>
+{% endif %}

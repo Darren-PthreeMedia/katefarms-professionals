@@ -1,0 +1,200 @@
+<section class="resources-main">
+  <div class="container">
+    <div class="row -mx-2 md:-mx-4">
+      <div class="col w-1/2 p-2 md:p-4 md:w-1/2 w-full resources-main__left">
+        <div class="product-detail-sheets">
+          <h2>Product Detail Sheets</h2>
+          {% for block in section.blocks %}
+            {% if block.type == 'product-detail-sheet' %}
+              <div class="product-detail-sheet">
+                <a href="{{block.settings.file_url}}" download><span>{{block.settings.link_text}}</span>{% render 'icon' with 'arrow-download'%}</a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="ceus-accordions">
+          <h2>CEUs</h2>
+          {% for block in section.blocks %}
+            {% if block.type == 'ceu' %}
+              <div class="accordion-container">
+                  <a class="ceus-accordion--title">
+                    <div class="ceus-reveal--icon-container">
+                      <img class="ceus-reveal--icon" src="{{ 'reveal-icon.png' | asset_img_url: 'master' }}" alt="reveal icon">
+                    </div>
+                    <h3>{{ block.settings.ceu_title }}</h3>
+                  </a>
+                  <div class="ceus-accordion__panel">
+                    {{ block.settings.ceu_copy }}
+                  </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col w-1/2 p-2 md:p-4 md:w-1/2 w-full resources-main__right">
+        <div class="about-our-presenters">
+          <h2>About our Presenters</h2>
+
+          <div class="presenters-list">
+            {% for block in section.blocks %}
+              {% if block.type == 'presenter' %}
+
+               <div class="presenters-list__item">
+
+                {% if block.settings.presenter_image %}
+                  <a class="presenter-img" href="#presenter-{{forloop.index}}" rel="modal:open">
+                      <img
+                        width="1024"
+                        height="490"
+                        class="block w-full h-full lazyload md:object-cover md:object-center"
+                        alt=""
+                        data-src="{{ block.settings.presenter_image.url }}"
+                        data-srcset="{% include 'responsive-bg-image', image: block.settings.presenter_image %}"
+                        data-sizes="auto"
+                      >
+                  </a>
+                {% endif %}
+
+                  <div id="presenter-{{forloop.index}}" class="modal presenter-lightbox">
+                    <div class="presenter-lightbox--inner">
+                      <div class="presenter-lightbox--image w-full md:w-1/2 lg:w-1/3 md:flex md:flex-wrap">
+
+                        {% if block.settings.presenter_image %}
+                            <img
+                              width="1024"
+                              height="490"
+                              class="block w-full lazyload md:object-cover md:object-center"
+                              alt=""
+                              data-src="{{ block.settings.presenter_image.url }}"
+                              data-srcset="{% include 'responsive-bg-image', image: block.settings.presenter_image %}"
+                              data-sizes="auto"
+                            >
+                        {% endif %}
+                      </div>
+
+                      <div class="presenter-lightbox--info col w-full md:w-1/2 lg:w-2/3 relative px-0">
+                        {% if block.settings.presenter_name %}
+                          <h2 class="presenter-name">{{ block.settings.presenter_name }}</h2>
+                        {% endif %}
+
+                        {% if block.settings.presenter_role %}
+                          <h4 class="presenter-role">{{ block.settings.presenter_role }}</h4>
+                        {% endif %}
+
+                        {% if block.settings.presenter_description %}
+                          <p class="presenter-description">{{ block.settings.presenter_description }}</p>
+                        {% endif %}
+
+                        {% if block.settings.read_about_link_text %}
+                          <a class="presenter-read-more" target="_blank" href="{{block.settings.read_about_link_url}}">{{ block.settings.read_about_link_text }}</a>
+                        {% endif %}
+                      </div>   
+                    </div>
+                  </div>
+
+                {% if block.settings.presenter_name %}
+                  <h3 class="presenter-name">{{ block.settings.presenter_name }}</h3>
+                {% endif %}
+
+                {% if block.settings.presenter_role %}
+                  <h4 class="presenter-role">{{ block.settings.presenter_role }}</h4>
+                {% endif %}
+
+                {% if block.settings.read_about_link_text %}
+                  <a class="presenter-read-more" href="#presenter-{{forloop.index}}" rel="modal:open">{{ block.settings.read_about_link_text }}</a>
+                {% endif %}
+               </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> 
+</section>
+
+{% schema %}
+{
+  "name": "Resources Main",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "product-detail-sheet",
+      "name": "Product Detail Sheet",
+      "settings": [
+        {
+          "type": "url",
+          "label": "File Url",
+          "id": "file_url"
+        },
+        {
+          "type": "text",
+          "label": "Link Text",
+          "id": "link_text"
+        }
+      ]
+    },
+    {
+      "type": "ceu",
+      "name": "CEU",
+      "settings": [
+        {
+          "type": "textarea",
+          "label": "CEU Title",
+          "id": "ceu_title"
+        },
+        {
+          "type": "richtext",
+          "label": "CEU Copy",
+          "id": "ceu_copy"
+        }
+      ]
+    },
+    {
+      "type": "presenter",
+      "name": "Presenter",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Presenter Image",
+          "id": "presenter_image"
+        },
+        {
+          "type": "text",
+          "label": "Presenter Name",
+          "id": "presenter_name"
+        },
+        {
+          "type": "text",
+          "label": "Presenter Role",
+          "id": "presenter_role"
+        },
+        {
+          "type": "text",
+          "label": "Read About Link Text",
+          "id": "read_about_link_text"
+        },
+        {
+          "type": "url",
+          "label": "Read About Link Url",
+          "id": "read_about_link_url"
+        },
+        {
+          "type": "textarea",
+          "label": "Presenter Description",
+          "id": "presenter_description",
+          "info": "This info appears on lightbox"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<style>
+
+</style>

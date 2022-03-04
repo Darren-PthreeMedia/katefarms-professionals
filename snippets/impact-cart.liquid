@@ -1,0 +1,7 @@
+<input id="irclickid" type="hidden" name="attributes[irclickid]" value="">   
+<script>
+  (function() {
+    var r = function(f) {/in/.test(document.readyState) ? setTimeout(function() {r(f)}, 9) : f()}
+    r(function(){ document.getElementById('irclickid').value = getCookie('IRCLICKID');});
+  })()
+</script>

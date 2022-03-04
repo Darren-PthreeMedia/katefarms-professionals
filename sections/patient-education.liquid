@@ -1,0 +1,68 @@
+<section class="resources-section">
+  <div class="container">
+      <h2>{{ section.settings.headline }}</h2>
+      <p>{{ section.settings.subheadline }}</p>
+      <hr/>
+      <div class="resources-link-container patient-education">
+        {% for block in section.blocks %} 
+          <div class="download-resource-link-container">
+            <a href="{{ block.settings.resource_url }}">
+              <div class="img-wrapper">
+                {{ block.settings.resource_image | img_url: '1024x' | img_tag }}
+              </div>
+              <span class="title">{{ block.settings.title }}</span>
+              <span class="subtitle">{{ block.settings.resource_subheadline }}</span>
+              <span class="download-text">Click to download</span>
+            </a>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Patient Education",
+  "settings": [
+    {
+      "label": "Headline",
+      "id": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Subheadline",
+      "id": "subheadline",
+      "type": "html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Resource",
+      "name": "Resource",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Headline",
+          "id": "title"
+        },
+        {
+          "type": "text",
+          "label": "Subheadline",
+          "id": "resource_subheadline"
+        },
+        {
+          "type": "url",
+          "label": "Download URL",
+          "id": "resource_url"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "resource_image"
+        }        
+      ]
+    }
+  ]
+}
+{% endschema %}

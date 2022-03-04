@@ -1,0 +1,39 @@
+{%- assign meta = product.metafields.katefarms -%}
+
+<section data-section-type="product-ingredients-nutrition" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="c-accordion__item">
+      <h2 class="c-accordion__title" role="button" tabindex="0" aria-controls="{{ section.id }}-info" aria-expanded="false">
+        Ingredients &amp; Nutrition
+      </h2>
+      <div id="{{ section.id }}-info" class="c-accordion__content pb-12" style="display: none;">
+        <div class="row py-4">
+          {{ product.metafields.accentuate.ingredients_and_nutrition }}
+          {% comment %}
+            <div class="col w-full lg:w-2/3" data-product-details-content>
+            </div>
+            <div class="col w-full lg:w-1/3 px-0 sm:px-4">
+              Nutritions fact table
+              <div data-product-details-nutrifacts></div>
+            </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="application/json" data-product-details-json>
+  {
+    {%- if meta.wordpress_product_id != blank -%}
+      "wordpress_product_id": {{ meta.wordpress_product_id }}
+    {%- endif -%}
+  }
+  </script>
+</section>
+
+{% schema %}
+  {
+    "name": "Ingredients & Nutrition"
+  }
+{% endschema %}

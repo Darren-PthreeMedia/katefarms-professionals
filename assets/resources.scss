@@ -1,0 +1,99 @@
+/* ---- Resources page ----- */
+
+.resources-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.resources-section h2 {
+    font-size: 44px;
+    font-weight: bold;
+    color: #004466;
+}
+
+.resources-section p {
+    color: #004466;
+    font-size: 24px;
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.resources-link-container {
+    margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+    .resources-link-container {
+        display: grid;
+        column-gap: 100px;
+        row-gap: 48px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.download-resource-link-container {
+    max-width: 380px;
+}
+
+.download-resource-link-container img {
+    aspect-ratio: 380 / 491;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: 600ms ease;
+    margin-top: 16px;
+}
+
+.product-detail-sheets .download-resource-link-container img {
+    border: 1px solid #000;
+}
+
+.product-detail-sheets .download-resource-link-container:hover img {
+    border: 1px solid transparent;
+}
+
+.recipes .download-resource-link-container img {
+    aspect-ratio: 1 / 1;
+}
+
+.patient-education .download-resource-link-container img {
+    aspect-ratio: 380 / 220;
+    max-width: 380px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.recipes .download-resource-link-container img {
+    aspect-ratio: 1 / 1;
+}
+
+.download-resource-link-container:hover img {
+    transform: translateY(-3px);
+}
+
+.download-resource-link-container span {
+    display: block;
+}
+
+.download-resource-link-container span.title {
+    font-size: 29px;
+    margin-top: 16px;
+    line-height: 1.2;
+    color: #004466;
+    font-weight: 500;
+}
+
+.download-resource-link-container span.subtitle {
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.download-resource-link-container .download-text {
+    margin-top: 12px;
+    color: #6DCDB8;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#shopify-section-patient-education .resources-section {
+    padding-top: 0;
+}

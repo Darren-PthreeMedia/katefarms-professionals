@@ -1,0 +1,49 @@
+<section data-section-type="product-callouts" data-section-id="{{ section.id }}">
+
+<div class="container">
+
+  <div class="row">
+
+    {%- for block in section.blocks -%}
+      <div class="col w-full sm:flex-1">
+
+        {%- if block.settings.heading != blank -%}
+          <h3 class="font-bold text-2xl">{{ block.settings.heading }}</h3>
+        {%- endif -%}
+
+        {%- if block.settings.content != blank -%}
+          <div class="rte">
+            {{ block.settings.content }}
+          </div>
+        {%- endif -%}
+
+      </div>
+    {%- endfor -%}
+
+  </div>
+</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Callouts",
+    "blocks": [
+      {
+        "type": "callout",
+        "name": "Callout",
+        "settings": [
+          {
+            "id": "heading",
+            "label": "Heading",
+            "type": "text"
+          },
+          {
+            "id": "content",
+            "label": "Content",
+            "type": "richtext"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

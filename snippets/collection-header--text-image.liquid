@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="-mx-4">
+    {% comment %}
+    {% section 'breadcrumbs' %}
+    {% endcomment %}
+  </div>
+
+  <div class="flex bg-white flex-wrap">
+    <div class="col w-full md:w-1/2 md:flex md:flex-wrap py-4 md:py-8 pl-0 xl:pr-8 bg-white">
+      <div class="md:flex-1">
+        <h1 class="collection-title w-5/6 md:w-full font-bold leading-none mb-6"> {{ collection.title }} </h1>
+
+        <div class="rte">
+          {{ collection.description }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col w-full block md:w-1/2 relative px-0">
+
+      {%- assign image_object = collection.image | default: collection.products.first.featured_image -%}
+
+      <div class="hidden md:block pt-9/16"></div>
+
+      <div class="md:absolute md:inset-0 -mx-4 md:mx-0 md:w-full md:h-full">
+        <img
+          class="lazyload object-cover object-center block w-full h-full"
+          data-srcset="{%include 'responsive-bg-image', image: image_object %}"
+        >
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+

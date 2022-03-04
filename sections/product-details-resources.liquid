@@ -1,0 +1,62 @@
+<section class="resources-section">
+  <div class="container">
+      <h2>{{ section.settings.headline }}</h2>
+      <p>{{ section.settings.subheadline }}</p>
+      <hr/>
+      <div class="resources-link-container product-detail-sheets">
+        {% for block in section.blocks %} 
+          <div class="download-resource-link-container">
+            <a href="{{ block.settings.resource_url }}" target="_blank">
+              <div class="img-wrapper">
+                {{ block.settings.resource_image | img_url: '1024x' | img_tag }}
+              </div>
+              <span class="title">{{ block.settings.title }}</span>
+              <span class="subtitle">{{ block.settings.resource_subheadline }}</span>
+              <span class="download-text">Click to download</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Details",
+  "settings": [
+    {
+      "label": "Headline",
+      "id": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Subheadline",
+      "id": "subheadline",
+      "type": "html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Resource",
+      "name": "Resource",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Headline",
+          "id": "title"
+        },
+        {
+          "type": "url",
+          "label": "Download URL",
+          "id": "resource_url"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "resource_image"
+        }        
+      ]
+    }
+  ]
+}
+{% endschema %}

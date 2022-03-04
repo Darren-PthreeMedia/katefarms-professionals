@@ -1,0 +1,37 @@
+{%- if quantity_count -%}
+  {%- assign quantity_count = quantity_count | plus: 1 -%}
+{%- else -%}
+  {%- assign quantity_count = 0 -%}
+{%- endif -%}
+
+<div class="relative cart-quantity-field-wrap w-full md:w-auto md:inline-block">
+  <input
+    type="number"
+    id="updates_{{ item.key | handleize }}"
+    name="updates[]"
+    value="{{ item.quantity }}"
+    data-variant-id="{{ item.variant_id }}"
+    class="remove-number-spinner text-lg text-primary-blue border border-lightest-green inline-block leading-tight py-3 px-6 text-center rounded-full block w-full md:w-32"
+    min="0"
+    aria-label="{{ 'cart.general.item_quantity' | t }}"
+    data-number-more="#quantity-{{ forloop.index }}-more-{{ quantity_count }}"
+    data-number-less="#quantity-{{ forloop.index }}-less-{{ quantity_count }}"
+    data-sync="sync-{{ item.key | handleize }}"
+  >
+
+  <button
+    type="button"
+    data-number-switch
+    data-number-decrement
+    data-number-target="#updates_{{ item.key | handleize }}"
+    class="product-quantity-switch number-less js cursor-pointer text-primary-blue hover:text-black focus:text-black py-3 px-4 absolute left-0 top-1/2"
+  >&ndash;</button>
+
+  <button
+    type="button"
+    data-number-switch
+    data-number-increment
+    data-number-target="#updates_{{ item.key | handleize }}"
+    class="product-quantity-switch number-more js cursor-pointer text-primary-blue hover:text-black focus:text-black py-3 px-4 absolute right-0 top-1/2"
+  >&plus;</button>
+</div>

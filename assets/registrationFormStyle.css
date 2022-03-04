@@ -1,0 +1,68 @@
+
+
+
+#header, #logo, #fo2li20 label, #title2, #title20, #title10, #title11, #title14, #title16, #title23,
+#title36, #title137, #title151, #title143 {
+	display: none;
+}
+
+.desc {
+	display: none !important;
+}
+
+#fo2li20 > span:first-of-type  {
+	margin-right: 11px !important;
+}
+#fo2li20 > span:first  {
+	margin-right: 11px !important;
+}
+
+
+#Field20, #Field21, #Field10, #Field11, #Field16, #Field23, 
+#Field151, #Field143, #Field144, #Field145, #Field146, #Field147, #Field153, #Field141,
+#Field456, #Field457, #Field458, #Field459, #Field460, #Field461 {
+	height: 35px;
+    	border: 1px solid;
+}
+
+#Field2, #Field14, #Field136, #Field137, #Field148 {
+	height: 40px;
+    	border: 1px solid;
+}
+
+
+#placeholder {
+	padding-left: 6px;
+}
+
+#Field2 > div, #Field14 > div, #Field136 > div, #Field137 > div, #Field148 > div {
+	    width: calc(100% + 8px);
+}
+
+
+label[for='Field143'], label[for='Field144'], label[for='Field145'], label[for='Field146'], label[for='Field147'], label[for='Field148'], 
+label[for='Field456'], label[for='Field457'], label[for='Field458'], label[for='Field459'], label[for='Field460'], label[for='Field461'] {
+	display: none !important;
+}
+
+#fo2li20 span:first-child {
+	margin-right: 8px;
+}
+#fo2li20 span {
+	width: 49%;
+}
+#Field20, #Field21 {
+	width: 100%;
+}
+#Field11 {
+	width: 100%;
+}
+
+#saveForm {
+	width: 100%;
+    	height: 35px;
+    	background-color: #65af24;
+	border: none;
+	color: white;
+	letter-spacing: 1px;
+}

@@ -1,0 +1,28 @@
+<section class="bg-lightest-green relative py-6" data-section-type="swell-redeem-banner" data-section-id="{{ section.id }}">
+  <div class="container">
+
+    <div class="bg-lightest-green z-50 hero-spinner absolute inset-0 opacity-100 pointer-events-none flex items-center justify-center">
+      {% include 'spinner' %}
+    </div>
+
+    <div class="xl:w-2/3">
+      {% comment %} Valid customer, swell is initialized. {% endcomment %}
+      <div
+        class="swell-redeem-content swell-redeem-content--eligible"
+        data-swell-redeem-hero="eligible"
+        style="display: block;"
+      >
+        {% include 'swell-redeem-hero--eligible' %}
+      </div>
+
+      <div
+        class="swell-redeem-content swell-redeem-content--ineligible"
+        data-swell-redeem-hero="ineligible"
+        style="display: none;"
+      >
+        {% include 'swell-redeem-hero--ineligible' %}
+      </div>
+    </div>
+
+  </div>
+</section>

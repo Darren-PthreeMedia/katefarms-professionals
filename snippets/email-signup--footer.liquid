@@ -1,0 +1,53 @@
+<section class="content-info bg-primary-blue text-white px-2 py-8">
+  <div class="container">
+    <div class="flex flex-col md:flex-row border-b border-b-solid border-footer-gray py-12">
+      <div class="w-full md:w-1/2 pb-8 md:pb-0">
+        <div class="text-4xl font-medium text-white w-full md:w-5/6 pb-3 tracking-tight leading-tight">{{ settings.signup_header }}</div>
+        <div class="text-lg text-white w-full md:w-5/6">{{ settings.signup_subheader }}</div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="gf_browser_gecko gform_wrapper footer-mailing-list_wrapper" id="gform_wrapper_50">
+          <form method="post" enctype="multipart/form-data" id="gform_50" class="footer-mailing-list" action="https://{{ wordpress_url }}">
+            <div class="gform_heading">
+              <span class="gform_description"></span>
+            </div>
+            <div class="flex flex-col md:flex-row py-2">
+            <div class="gform_body">
+              <ul id="gform_fields_50" class="gform_fields top_label form_sublabel_below description_below">
+                <li id="field_50_1" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                  <label class="gfield_label text-xl font-bold text-white" for="input_50_1">Email<span class="gfield_required">*</span></label>
+                  <div class="ginput_container ginput_container_email">
+                    <input name="input_1" id="input_50_1" type="email" value="" class="medium shadow appearance-none border rounded tiny-w-full w-2/3 py-2 px-2 mb-4 md:mb-0 md:px-3 text-black leading-tight focus:outline-none focus:shadow-outline mr-4 md:mr-8" aria-required="true" aria-invalid="false" required>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="gform_footer top_label tiny-w-full w-1/3 md:ml-4 flex items-end">
+              <input type="submit" id="gform_submit_button_50" class="gform_button button bg-ada-teal border-ada-teal text-white w-1/3 font-medium py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" value="Sign up" onclick="if(window[&quot;gf_submitting_50&quot;]){return false;}  if( !jQuery(&quot;#gform_50&quot;)[0].checkValidity || jQuery(&quot;#gform_50&quot;)[0].checkValidity()){window[&quot;gf_submitting_50&quot;]=true;}  " onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_50&quot;]){return false;} if( !jQuery(&quot;#gform_50&quot;)[0].checkValidity || jQuery(&quot;#gform_50&quot;)[0].checkValidity()){window[&quot;gf_submitting_50&quot;]=true;}  jQuery(&quot;#gform_50&quot;).trigger(&quot;submit&quot;,[true]); }">
+              <input type="hidden" class="gform_hidden" name="is_submit_50" value="1">
+              <input type="hidden" class="gform_hidden" name="gform_submit" value="50">
+              <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+              <input type="hidden" class="gform_hidden" name="state_50" value="WyJbXSIsIjRiN2Q0OWRhMTdhNTZiZGRmZjMwNTA4MjRkZTA2MTNmIl0=">
+              <input type="hidden" class="gform_hidden" name="gform_target_page_number_50" id="gform_target_page_number_50" value="0">
+              <input type="hidden" class="gform_hidden" name="gform_source_page_number_50" id="gform_source_page_number_50" value="1">
+              <input type="hidden" name="gform_field_values" value="">
+            </div>
+            </div>
+          </form>
+        </div>
+        <script type="text/javascript"> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 50) {} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script>
+        <script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [50, 1]) } ); </script>
+        {%comment%}
+        <div class="w-full text-xl font-bold">Email address</div>
+        <div class="flex tiny-flex-col py-2">
+          <input class="shadow appearance-none border rounded tiny-w-full w-2/3 py-2 px-2 tiny-mb-4 md:px-3 text-black leading-tight focus:outline-none focus:shadow-outline mr-4 md:mr-8" id="email" type="text">
+          <button class="bg-ada-teal text-white w-1/3 font-medium py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" type="button">
+            Sign up
+          </button>
+        </div>
+        {%endcomment%}
+        <div class="text-sm font-light">{{ settings.signup_policy }} {% if settings.signup_policy_url != blank %}<a href="{{ settings.signup_policy_url }}" class="underline hover:text-gray-200 focus:text-gray-200">Privacy Policy</a>.{% endif %}</div>
+      </div>
+    </div>
+  </div>
+</section>

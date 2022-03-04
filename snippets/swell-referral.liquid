@@ -1,0 +1,78 @@
+{%- assign subtitle = 'swell.refer.content.subtitle' | t -%}
+
+<div class="swell-refer">
+	<div
+		class="swell-referral-banner relative text-white pt-8 lg:pt-12 md:pb-16 overflow-hidden bg-primary-blue"
+	>
+		<div class="swell-referral-banner-inner container relative z-10 mb-6 md:mb-0">
+			<section class="swell-referral-container w-full">
+				<div class="swell-referral-container-text">
+					<h2 class="swell-referral-title">{{ 'swell.refer.content.title' | t }}</h2>
+
+					{%- unless subtitle == blank -%}
+						<div class="swell-referral-subtitle">{{ subtitle }}</div>
+					{%- endunless -%}
+
+					<p class="swell-referral-container-text-area"> {{ 'swell.refer.content.content' | t }} </p>
+				</div>
+
+				<div class="form-wrap">
+					<div class="swell-referral relative referral-form-wrapper">
+						<div class="swell-spinner"> {% include 'spinner' %} </div>
+					</div>
+
+					<div class="swell-referral-copy-links hidden-div"></div>
+				</div>
+			</section>
+		</div>
+
+		{% comment %} {%- if section.settings.banner_mobile != blank -%}
+		<div
+			class="swell-referral-banner-bg bg-contain bg-no-repeat bg-right-top md:hidden"
+			data-src="{{ section.settings.banner_mobile | img_url: '768x' }}"
+			style="margin-right: -350px; margin-top: -800px;"
+		>
+			<img data-src="{{ section.settings.banner_mobile | img_url: '768x' }}" class="invisible">
+		</div>
+		{%- endif -%} {% endcomment %}
+
+		{%- if section.settings.banner != blank -%}
+
+			{%
+			include 'responsive-image',
+			image: section.settings.banner,
+			image_class: 'block w-full h-full object-cover object-center'
+			max_width: 2800,
+			max_height: 1504,
+			wrapper_class: 'swell-referral-banner-bg hidden md:block absolute inset-0 z-0',
+			%}
+		{%- endif -%}
+
+	</div>
+
+	<div class="container">
+		{%- if customer -%}
+			<div class="swell-referral-history-div hidden-div">
+				{% include "swell-referral-history" %}
+			</div>
+		{%- endif -%}
+
+		<div class="py-8">
+			{%- if _title -%}
+				<h3 class="mb-4 leading-tight referral-content-title">{{ _title }}</h3>
+			{%- endif -%}
+
+			{%- if _content -%}
+				<div class="referral-content-rte rte">
+					{{ _content }}
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+</div>
+
+<style>
+.template-page-refer form.existing .form-fields:after {
+	content: {{ 'swell.refer.existing_user.field_sublabel' | t | json }};
+}
+</style>

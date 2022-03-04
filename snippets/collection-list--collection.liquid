@@ -1,0 +1,45 @@
+<div class="collection-list-item container" {{ block.shopify_attributes }}>
+  <div>
+    <div class="collection-item-title">
+      <h2>{{ data.block_title }}</h2>
+      {% if data.bubble_copy != blank %}
+        <span class="collection-bubble">{{ data.bubble_copy }}</span>
+      {% endif %}
+    </div>
+    <p>{{ data.block_copy }}</p>
+  </div>
+  <div class="collection-list-product-item-container">
+    {% for product in data.collection.products %}
+      <div class="collection-list-product-item">
+        <a href="{{ product.url }}" class="link-to-product"></a>
+        <div class="product-image">
+          <img src="{{ product | img_url: 'large' }}"/>
+        </div>
+        <div class="product-info-and-cta">
+          <div>
+            <p class="title">{{ product.title }}</p>
+            <span class="quantity">{{ product.variants[0].title }}</span>
+            <p class="description">{{ product.description }}</p>
+          </div>
+          {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true', data-productid: product.id %}
+            <select name="id" style="visibility: hidden">
+              {% for variant in product.variants %}
+                <option
+                  {% if variant == current_variant %}selected="selected"{% endif %}
+                  {% unless variant.available %}disabled="disabled"{% endunless %}
+                  value="{{ variant.id }}">
+                    {{ variant.title }}
+                </option>
+              {% endfor %}
+            </select>
+            {% if product.available %}
+              <button type="submit" name="add" data-submit-button>Add to cart</button>
+            {% else %}
+              <button disabled>Sold out</button>
+            {% endif %}
+          {% endform %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

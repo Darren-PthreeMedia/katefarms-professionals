@@ -1,0 +1,147 @@
+{%- assign meta = product.metafields.katefarms -%}
+
+<section data-section-type="product-details" data-section-id="{{ section.id }}">
+  <div class="container py-6 xl:py-12 mt-6 xl:mt-12">
+    <div class="row">
+      <div class="col w-full">
+        <h2 class="border-t border-lightest-gray text-4xl pt-4">Details</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col w-full lg:w-7/12">
+
+        <div class="rte product-description">
+          {%- if product.metafields.katefarms.product_description != blank -%}
+            {{ product.metafields.katefarms.product_description }}
+          {%- else -%}
+            {{ product.description }}
+          {%- endif -%}
+
+          {% comment %} Detail sheet downloads {% endcomment %}
+          <div>
+            {% comment %} Temporarily removed per Christian, July 8 {% endcomment %}
+
+            {% comment %} <a href="#" class="inline-block mr-6">
+              Standard 1.0 Formula Details &rarr;
+            </a> {% endcomment %}
+
+            {%- if meta.product_details_sheet_url != blank -%}
+            <div class="product_sheet_wrapper">
+              <a href="{{ meta.product_details_sheet_url }}" target="_blank" class="inline-block">
+                Download Product Detail Sheet &darr;
+              </a> {%- if meta.product_details_sheet_desc != blank -%} <p class="m-0 text-sm">{{ meta.product_details_sheet_desc }}</p> {% endif %}
+            </div>
+            {%- endif -%}
+            {%- if meta.product_details_sheet_url_old != blank -%}
+            <div class="product_sheet_wrapper mt-4">
+              <a href="{{ meta.product_details_sheet_url_old }}" target="_blank" class="inline-block">
+                Download Product Detail Sheet &darr;
+              </a> {%- if meta.product_details_sheet_desc != blank -%} <p class="m-0 text-sm">{{ meta.product_details_sheet_desc_old }}</p> {% endif %}
+            </div>
+            {%- endif -%}
+
+            {%- if meta.product_details_sheet_url_3 != blank -%}
+            <div class="product_sheet_wrapper mt-4">
+              <a href="{{ meta.product_details_sheet_url_3 }}" target="_blank" class="inline-block">
+                Download Product Detail Sheet &darr;
+              </a> {%- if meta.product_details_sheet_desc != blank -%} <p class="m-0 text-sm">{{ meta.product_details_sheet_desc_3 }}</p> {% endif %}
+            </div>
+            {%- endif -%}
+
+            <div class="inline-block mr-4" data-product-insurance-code>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div class="col w-full lg:w-5/12">
+
+        {%- unless meta.certification_title.size > 0 -%}
+
+          {%- if section.blocks.size > 0 -%}
+            <div class="row">
+
+              {%- for block in section.blocks -%}
+                <div class="col w-1/2 pt-2">
+                  {%- if block.type == 'icon' -%}
+                    {% include 'product-certification-icon', _block: block.settings %}
+                  {%- endif -%}
+                </div>
+              {%- endfor -%}
+
+            </div>
+          {%- endif -%}
+
+        {%- else -%}
+
+        <div class="row">
+          {%- for c_image in meta.certification_image -%}
+
+            <div class="col w-1/2 pt-2">
+              <div class="flex justify-center flex-wrap py-4">
+                {%- assign title = meta.certification_title[forloop.index0] -%}
+                {%- assign img = c_image[0] -%}
+
+                {%- if img -%}
+                  <div data-bgset="{{ img.src }}" class="mx-auto block w-full lazyload bg-no-repeat bg-center bg-contain" data-sizes="auto" style="max-width: 95px; max-height: 70px;">
+                    <div style="padding-top: 75%"></div>
+                  </div>
+                {%- endif -%}
+
+                <div class="text-base text-ada-gray text-center w-full py-3">
+                  {{ title }}
+                </div>
+              </div>
+            </div>
+
+
+
+          {%- endfor -%}
+        </div>
+
+
+        {%- endunless -%}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Details",
+    "blocks":[
+      {
+        "type": "icon",
+        "name": "Icon Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "number",
+            "id": "max_width",
+            "label": "Icon max width"
+          },
+          {
+            "type": "number",
+            "id": "max_height",
+            "label": "Icon max height"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

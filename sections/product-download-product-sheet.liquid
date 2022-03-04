@@ -1,0 +1,16 @@
+<section class="download-pds-container">
+  <a href="{{ product.metafields.accentuate.product_detail_sheet_link }}" class="download-pds" target="_blank">Download Product Detail Sheet</a>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Detail Sheet",
+    "settings": [
+        {
+          "type": "url",
+          "id": "pds_link",
+          "label": "Link to download"
+        }
+    ]
+  }
+{% endschema %}

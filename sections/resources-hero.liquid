@@ -1,0 +1,38 @@
+<section class="resources-hero">
+  <div class="container">
+    <h1 class="resources-hero__title">{{ section.settings.hero_title }}</h1>
+  </div> 
+</section>
+
+{% schema %}
+{
+  "name": "Resources Hero",
+  "settings": [
+    {
+      "type": "color",
+      "id": "hero_background_color",
+      "label": "Hero Background Color",
+      "info": "#000000"
+    },
+    {
+      "label": "Hero Title",
+      "id": "hero_title",
+      "type": "text"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "info": "#000000"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .resources-hero {
+    background-color: {{ section.settings.hero_background_color }};
+  }
+  .resources-hero h1 {
+    color: {{section.settings.heading_color}};
+  }
+</style>

@@ -1,0 +1,17 @@
+{%comment%}Impact Body Code {%endcomment%}
+{% if customer %} 
+  {% assign email_hash = {customer.email} | sha1 %}
+{% endif %}
+<script type="text/javascript">
+  ire('identify', {customerId: '{% if customer %}{{customer.id}}{% endif %}', customerEmail: '{% if customer %}{{email_hash}}{% endif %}'});
+</script>
+<!--Impact Decode Params-->
+<script>
+  // Get Impact clickid from query string and store in cookie.
+  var urlParams = new URLSearchParams(window.location.search)
+  if (urlParams.has('irclickid')) {
+   // Query string contains irclickid and cookie does not already exist.
+  var domainName = window.location.hostname;
+  document.cookie = "IRCLICKID="+ urlParams.get('irclickid')+"; path=/; secure; domain=.anchour.com";
+  } </script>
+  

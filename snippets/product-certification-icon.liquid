@@ -1,0 +1,11 @@
+<div class="flex justify-center flex-wrap py-4">
+  {%- if _block.icon -%}
+  {%- assign max_width = _block.max_width -%}
+  {%- assign max_height = _block.max_height -%}
+    {% include 'responsive-image', image: _block.icon, max_width: max_width, max_height: max_height, wrapper_class: 'mx-0'  %}
+  {%- endif -%}
+
+  <div class="text-base text-ada-gray text-center w-full py-3">
+    {{ _block.title }}
+  </div>
+</div>

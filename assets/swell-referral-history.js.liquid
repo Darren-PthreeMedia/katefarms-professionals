@@ -1,0 +1,39 @@
+class ReferralHistory {
+	constructor (customer) {
+		this.customer = customer;
+		this.centsPerPoint = 0.1;
+	}
+	renderReferralHistory() {
+		var customerDetails = swellAPI.getCustomerDetails();
+		$(".swell-point-balance-dollar").text(`$${(customerDetails.pointsBalance) * this.centsPerPoint} `)
+
+		if (customerDetails.pointsBalance > 0) {
+			$(".swell-referral-history-div").removeClass("hidden-div").addClass("showing-div");
+		}
+		$(".swell-referral-back").css("margin", "2% 0 3% 0");
+
+		$(".swell-referral-history").append(
+			$("<table>").addClass("swell-referral-history-table").append(
+				$("<thead>").append(
+					$("<tr>").append(
+						$("<td>").text("Email"),
+						$("<td>").text("Status"),
+					)
+				),
+				$("<tbody>")
+			)
+		);
+		this.populateReferredEmails();
+	}
+
+	populateReferredEmails() {
+		this.customer.referrals.forEach(referrel => {
+			$(".swell-referral-history table tbody").append(
+				$("<tr>").append(
+					$("<td>").text(referrel.email),
+					$("<td>").text(`${referrel.completedAt === null ? "Invited" : "Purchased ($10 earned)"}`)
+				)
+			)
+		})
+	}
+}

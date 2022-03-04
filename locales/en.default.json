@@ -1,0 +1,400 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content"
+    },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "404": {
+      "title": "404 Page Not Found",
+      "subtext_html": "<div>The page you requested does not exist.<\/div> <div class=\"pt-4\"> <a class=\"btn btn-primary-blue\" href=\"\/collections\/all\">Continue Shopping<\/a><\/div>"
+    },
+    "password_page": {
+      "opening_soon": "Opening Soon",
+      "spread_the_word": "Spread the word",
+      "login_form_heading": "Enter store using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_heading": "Find out when we open",
+      "signup_form_email_label": "Email",
+      "signup_form_email_placeholder": "Your email",
+      "signup_form_submit": "Submit",
+      "signup_form_success": "We will send you an email right before we open!",
+      "admin_link_html": "Are you the store owner? <a href=\"\/admin\">Log in here<\/a>",
+      "password_link": "Enter using password",
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+    },
+    "social": {
+      "share_on_facebook": "Share",
+      "share_on_twitter": "Tweet",
+      "share_on_pinterest": "Pin it",
+      "alt_text": {
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Tweet on Twitter",
+        "share_on_pinterest": "Pin on Pinterest"
+      }
+    },
+    "search": {
+      "title": "Search for products on our site",
+      "placeholder": "Search our store",
+      "submit": "Search",
+      "heading": {
+        "one": "Search result",
+        "other": "Search results"
+      },
+      "results_with_count": {
+        "one": "{{ count }} result for \"{{ terms }}\"",
+        "other": "{{ count }} results for \"{{ terms }}\""
+      },
+      "no_results_html": "Please try a different search term or go back to the <a href=\"\/\">homepage<\/a>."
+    },
+    "newsletter_form": {
+      "newsletter_email": "Join our mailing list",
+      "email_placeholder": "Email address",
+      "confirmation": "Thanks for subscribing",
+      "submit": "Subscribe"
+    }
+  },
+  "blogs": {
+    "article": {
+      "author_on_date_html": "Posted by {{ author }} on {{ date }}",
+      "comment_meta_html": "{{ author }} on {{ date }}",
+      "read_more": "Read more",
+      "read_more_title": "Read more: {{ title }}",
+      "by_author": "by {{ author }}",
+      "tags": "Tags"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "general": {
+      "categories": "Categories"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Shopping Cart",
+      "remove": "Remove",
+      "note": "Special instructions for seller",
+      "subtotal": "Subtotal",
+      "shipping_at_checkout": "Shipping & taxes calculated at checkout",
+      "update": "Update Cart",
+      "checkout": "Proceed to checkout",
+      "empty": "Your cart is currently empty.",
+      "cookies_required": "Enable cookies to use the shopping cart",
+      "continue_browsing_html": "Continue shopping",
+      "item_quantity": "Item quantity",
+      "savings": "You're saving"
+    },
+    "label": {
+      "cart": "Cart",
+      "product": "Product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "estimated_shipping": "Estimated Shipping",
+      "total": "Total",
+      "discounted_price": "Discounted price",
+      "original_price": "Original price"
+    },
+    "item_properties": {
+      "subscription_frequency": "Shipped {{ frequency }} {{ percentage }}"
+    }
+  },
+  "collections": {
+    "general": {
+      "no_matches": "Sorry, there are no products in this collection",
+      "link_title": "Browse our {{ title }} collection"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "send": "Send",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
+    }
+  },
+  "customer": {
+    "legal": {
+      "login_privacy_terms_html": "By signing in you agree to our <a class=\"underline\" href=\"https:\/\/www.katefarms.com\/policy\/privacy-policy\/\" target=\"_blank\">Privacy Policy<\/a> &amp; <a class=\"underline\" href=\"https:\/\/www.katefarms.com\/policy\/terms-of-use\/\" target=\"_blank\">Terms of Use<\/a>.",
+      "register_privacy_terms_html": "By creating an account you agree to our <a class=\"underline\" href=\"https:\/\/www.katefarms.com\/policy\/privacy-policy\/\" target=\"_blank\">Privacy Policy<\/a> &amp; <a class=\"underline\" href=\"https:\/\/www.katefarms.com\/policy\/terms-of-use\/\" target=\"_blank\">Terms of Use<\/a>."
+    },
+    "account": {
+      "title": "My Account",
+      "details": "Account Details",
+      "view_addresses": "View Addresses",
+      "return": "Return to Account Details",
+      "top_referral_banner": {
+        "title": "Refer a Friend to Kate Farms",
+        "content": "Give your friends $10 off on their first order and get $10 off your next order for each successful referral.",
+        "button_text": "Share with a friend"
+      },
+      "referral_banner": {
+        "title": "Give $10, Get $10",
+        "subtitle": "Refer a Friend to Kate Farms",
+        "content": "Give your friends $10 off on their first order and get $10 off your next order for each successful referral.",
+        "button_text": "Share with a friend"
+      }
+    },
+    "activate_account": {
+      "title": "Activate Account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Activate Account",
+      "cancel": "Decline Invitation"
+    },
+    "addresses": {
+      "title": "Your Addresses",
+      "default": "Default",
+      "add_new": "Add a New Address",
+      "edit_address": "Edit address",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "company": "Company",
+      "address1": "Address1",
+      "address2": "Address2",
+      "city": "City",
+      "country": "Country",
+      "province": "Province",
+      "zip": "Postal\/Zip Code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add Address",
+      "update": "Update Address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "login": {
+      "title": "Already an Nutrition Community member? Sign in.",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot your password?",
+      "sign_in": "Sign in",
+      "cancel": "Return to Store",
+      "guest_title": "Continue as a guest",
+      "guest_continue": "Continue"
+    },
+    "orders": {
+      "title": "Order History",
+      "order_number": "Order #",
+      "date": "Date",
+      "payment_status": "Payment",
+      "fulfillment_status": "Status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date": "Placed on {{ date }}",
+      "cancelled": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "fulfilled_at": "Date fulfilled",
+      "track_shipment": "Track shipment",
+      "tracking_url": "Tracking link",
+      "tracking_company": "Carrier",
+      "tracking_number": "Tracking number",
+      "subtotal": "Subtotal"
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "email": "Email",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "subtext": "We will send you an email to reset your password.",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password for {{ email }}",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Reset Password"
+    },
+    "register": {
+      "title": "Create account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create account",
+      "cancel": "Return to Store"
+    }
+  },
+  "homepage": {
+    "onboarding": {
+      "blog_title": "Your post's title",
+      "blog_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog.",
+      "blog_author": "Author name",
+      "product_title": "Example Product Title",
+      "collection_title": "Example Collection Title",
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
+    }
+  },
+  "layout": {
+    "header": {
+      "nav": {
+        "toggle": "Toggle Navigation"
+      }
+    },
+    "search": {
+      "term-label": "Search",
+      "placeholder": "Search"
+    },
+    "cart": {
+      "title": "Cart",
+      "summary": "Summary",
+      "items_count": {
+        "one": "item",
+        "other": "items"
+      }
+    },
+    "customer": {
+      "account": "My Account",
+      "logged_in_as_html": "Logged in as {{ first_name }}",
+      "log_out": "Log out",
+      "log_in": "Log in",
+      "create_account": "Create account"
+    },
+    "footer": {
+      "social_platform": "{{ name }} on {{ platform }}",
+      "copyright": "Copyright",
+      "payment_methods": "Payment methods accepted"
+    }
+  },
+  "products": {
+    "product": {
+      "regular_price": "Regular price",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "in_stock": "In stock.",
+      "out_of_stock": "Out of stock",
+      "on_sale": "On Sale",
+      "on_sale_from_html": "On Sale from {{ price }}",
+      "from_text_html": "From {{ price }}",
+      "quantity": "Quantity",
+      "add_to_cart": "Add to Cart",
+      "shipping": "Free 2-day shipping.",
+      "reviews": "Reviews",
+      "fixed_bar_button": "Order now",
+      "fixed_bar_text": "Starting at {{ price }} with a subscription"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Here's your gift card!",
+      "disabled": "Disabled",
+      "expired": "Expired on {{ expiry }}",
+      "active": "Expires on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "remaining_html": "{{ balance }} left",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "initial_value": "Gift card value: {{ value }}"
+    }
+  },
+  "date_formats": {
+    "month_day_year": "%B %d, %Y"
+  },
+  "swell": {
+    "redeem": {
+      "eligible_title": "You've been gifted a $10 discount code",
+      "eligible_content": "This one-time discount will be applied automatically at checkout, or you may save the code for later.",
+      "eligible_coupon_prefix": "Discount code: ",
+      "eligible_shop_button_text": "Shop Kate Farms",
+      "eligible_copy_button_text": "Copy code to clipboard",
+      "invited_title": "You've been gifted a $10 discount code",
+      "invited_content": "Redeem your reward now or save it for later.",
+      "invited_button_text": "Redeem now",
+      "ineligible_title": "Not eligible to use this referral code",
+      "ineligible_content_html": "<p>This message may be displayed if you have purchased Kate Farms before or are accessing a referral link on the device used to share it.<\/p>\n<p>Only new customers are eligible to receive a referral discount.<\/p>\n<p>Please <a href=\"https:\/\/katefarms.com\/contact-us\">contact us<\/a> if you believe you are receiving this message in error.<\/p>",
+      "ineligible_button_text": "Shop Kate Farms"
+    },
+    "refer": {
+      "content": {
+        "title": "Give $10, Get $10",
+        "subtitle": "Refer a friend",
+        "content": "Give your friends $10 off on their first Kate Farms order and get $10 off for each successful referral."
+      },
+      "new_user": {
+        "form_header": "Get your referral link",
+        "field_label": "Enter your email address to get started",
+        "button_text": "Next"
+      },
+      "existing_user": {
+        "form_header": "Share your referral link",
+        "field_label": "Enter your friends' emails",
+        "field_sublabel": "Separate multiple email addresses with a comma",
+        "button_text": "Send",
+        "share_form": {
+          "label": "Post or share your referral link anywhere",
+          "button_text": "Copy link",
+          "copied_text": "Link copied!"
+        },
+        "success": {
+          "title": "Thank you for sharing Kate Farms",
+          "excerpt_html": "Refer another friend, or <a class=\"underline\" href=\"\/\" title=\"Visit the shop\">visit the shop<\/a>.",
+          "button_text": "Refer another friend"
+        }
+      },
+      "errors": {
+        "invalid_email": "Please enter a valid email address",
+        "emails_already_purchased": "A purchase has already been made using this email address. Please try another!"
+      }
+    },
+    "coupon_form": {
+      "heading": "Redeem rewards",
+      "subtitle_html": "You have <span class=\"points\"> <span class=\"swell-point-balance-dollar\">$X<\/span> in redeemable credit.<\/span>",
+      "new_order": {
+        "heading": "New order",
+        "content": "To redeem your credit, visit the shop, and add at least one product to your cart. Your credit will be available automatically at checkout.",
+        "button_text": "Buy Kate Farms"
+      },
+      "existing_subscription": {
+        "heading": "Existing Subscription",
+        "content": "You can redeem earned credit by generating a discount code to use on an existing subscription.",
+        "redeem": {
+          "label": "Redeem credit as a discount code",
+          "select_option": "Select an amount",
+          "button_text": "Create discount code"
+        },
+        "success": {
+          "label": "Use this code to apply a discount to an existing subscription:",
+          "button_text": "Copy to clipboard"
+        }
+      }
+    }
+  }
+}

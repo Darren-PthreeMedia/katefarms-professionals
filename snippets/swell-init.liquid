@@ -1,0 +1,65 @@
+  <script type="application/json" data-swell-i18n>
+    {
+      "refer": {
+        "new_user": {
+          "form_header": {{ 'swell.refer.new_user.form_header' | t | json }},
+          "field_label": {{ 'swell.refer.new_user.field_label' | t | json }},
+          "button_text": {{ 'swell.refer.new_user.button_text' | t | json }}
+        },
+        "existing_user": {
+          "form_header": {{ 'swell.refer.existing_user.form_header' | t | json }},
+          "field_label": {{ 'swell.refer.existing_user.field_label' | t | json }},
+          "button_text": {{ 'swell.refer.existing_user.button_text' | t | json }},
+          "share_form": {
+            "label": {{ 'swell.refer.existing_user.share_form.label' | t | json }},
+            "button_text": {{ 'swell.refer.existing_user.share_form.button_text' | t | json }},
+            "copied_text": {{ 'swell.refer.existing_user.share_form.copied_text' | t | json }}
+          },
+          "success": {
+            "title": {{ 'swell.refer.existing_user.success.title' | t | json }},
+            "excerpt_html": {{ 'swell.refer.existing_user.success.excerpt_html' | t | json }},
+            "button_text": {{ 'swell.refer.existing_user.success.button_text' | t | json }}
+          }
+        },
+        "errors": {
+          "invalid_email": {{ 'swell.refer.errors.invalid_email' | t | json }},
+          "emails_already_purchased": {{ 'swell.refer.errors.emails_already_purchased' | t | json }}
+        }
+      },
+      "coupon_form": {
+        "heading": {{ 'swell.coupon_form.heading' | t | json }},
+        "subtitle_html": {{ 'swell.coupon_form.subtitle_html' | t | json }},
+        "new_order": {
+          "heading": {{ 'swell.coupon_form.new_order.heading' | t | json }},
+          "content": {{ 'swell.coupon_form.new_order.content' | t | json }},
+          "button_text": {{ 'swell.coupon_form.new_order.button_text' | t | json }}
+        },
+        "existing_subscription": {
+          "heading": {{ 'swell.coupon_form.existing_subscription.heading' | t | json }},
+          "content": {{ 'swell.coupon_form.existing_subscription.content' | t | json }},
+
+          "redeem": {
+            "label": {{ 'swell.coupon_form.existing_subscription.redeem.label' | t | json }},
+            "select_option": {{ 'swell.coupon_form.existing_subscription.redeem.select_option' | t | json }},
+            "button_text": {{ 'swell.coupon_form.existing_subscription.redeem.button_text' | t | json }}
+          },
+          "success": {
+            "label": {{ 'swell.coupon_form.existing_subscription.success.label' | t | json }},
+            "button_text": {{ 'swell.coupon_form.existing_subscription.success.button_text' | t | json }}
+          }
+        }
+      }
+    }
+  </script>
+
+  {% comment %} {%- if template contains 'redeem' -%}
+    {{ 'swell-redeem.js' | asset_url | script_tag }}
+  {%- endif -%} {% endcomment %}
+
+  {% comment %} {%- if template contains 'refer' -%}
+    {{ 'swell-referral.js' | asset_url | script_tag }}
+  {%- endif -%} {% endcomment %}
+
+  {% comment %} {%- if template contains 'cart' -%}
+    {{ 'swell-cart.js' | asset_url | script_tag }}
+  {%- endif -%} {% endcomment %}

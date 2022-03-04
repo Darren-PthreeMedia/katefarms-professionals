@@ -1,0 +1,32 @@
+{% if customer.metafields.subscriptions.customer_string %}
+  <!--BeginRechargeCode-->
+  <div class="mb-8">
+    <a
+      class="btn btn-primary-blue btn-lg text-base xl:text-xl w-64 px-6 text-center max-w-full"
+      data-recharge-management-link
+      href="/tools/recurring/customer/{{customer.metafields.subscriptions.customer_string}}/subscriptions/"
+    >
+      Manage Subscriptions
+    </a>
+  </div>
+  <!--EndRechargeCode-->
+{% endif %}
+
+<!-- <div class="mb-8">
+  <a href="{{ section.settings.button_link }}" class="btn btn-primary-blue btn-lg text-base xl:text-xl w-64 px-6 text-center max-w-full">
+    {{ 'customer.account.top_referral_banner.button_text' | t }}
+  </a>
+</div> -->
+
+{% schema %}
+  {
+    "name": "Account buttons",
+    "settings": [
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ]
+  }
+{% endschema %}

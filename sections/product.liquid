@@ -1,0 +1,465 @@
+{% include 'product-init' %}
+{%- assign has_single_variant = true -%}
+{%- assign meta = product.metafields.katefarms -%}
+{%- assign key = blank -%}
+{%- assign flavor = product.title -%}
+{%- assign case_size = 12 -%}
+{%- assign product_title = product.title -%}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+{%- if product.metafields.katefarms.product_listing_title != blank -%}
+{%- assign product_title = product.metafields.katefarms.product_listing_title -%}
+{%- endif -%}
+
+{%- if product.metafields.katefarms.product_flavor != blank -%}
+{%- assign flavor = product.metafields.katefarms.product_flavor -%}
+{%- endif -%}
+
+{%- if meta.option_title != blank -%}
+{%- capture all_options -%}
+|{{ meta.product_option_order }}#{{ flavor }}##
+{%- for title in meta.option_title -%}
+{%- assign url = '' -%}
+
+{%- if meta.option_product[forloop.index0] != blank -%}
+{%- assign url = meta.option_product[forloop.index0] | strip -%}
+{%- endif -%}
+
+|{{ meta.option_order[forloop.index0] }}#{{ title }}#{{ url }}#{{ meta.option_subtext[forloop.index0] }}
+{%- endfor -%}
+{%- endcapture -%}
+
+{%- assign all_options = all_options | strip | replace_first: '|', '' | split: '|' | sort -%}
+{%- endif -%}
+
+{%- if product.metafields.katefarms.case_size != blank -%}
+{%- assign case_size = product.metafields.katefarms.case_size | plus: 0 -%}
+{%- endif -%}
+
+{%- if product.metafields.katefarms.primary_collection -%}
+{%- assign key = product.metafields.katefarms.primary_collection -%}
+{%- endif -%}
+
+{%- if all_options != blank or key != blank and collections[key].products.size > 1 -%}
+{%- assign has_single_variant = false -%}
+{%- endif -%}
+
+<section data-section-id="{{ section.id }}" data-section-type="product">
+
+  {%- unless template contains 'oos' -%}
+
+  <div class="product-fixed-bar fixed top-0 inset-x-0 z-50 transition-all ease-in-out duration-150">
+    <div class="product-fixed-bar__inner bg-white py-3 transition-all ease-in-out duration-150">
+      <div class="container">
+        <div class="row justify-between items-center">
+          <div class="col w-1/2 pr-0 md:w-auto text-primary-blue leading-tight">
+            <div class="text-lg md:text-xl lg:text-2xl font-bold">
+              {%- if product.metafields.katefarms.product_listing_title != blank -%}
+              {{ product.metafields.katefarms.product_listing_title }}
+              {%- else -%}
+              {{ product.title }}
+              {%- endif -%}
+            </div>
+
+            <div class="text-base">
+              Case of {{ case_size }}
+            </div>
+          </div>
+
+          <div class="col w-1/2 text-right md:w-auto md:flex md:justify-end md:items-center">
+
+            <div class="hidden md:block xl:text-xl pr-8">
+              {%- assign p = price_min | money -%}
+              {%- if product.metafields.subscriptions.subscription_id -%}
+              {{ 'products.product.fixed_bar_text' | t: price: p }}
+              {% endif %}
+            </div>
+
+            <button type="button" class="btn btn-primary-blue px-4 md:py-5 md:px-8" data-bar-buy-now>
+              {{ 'products.product.fixed_bar_button' | t }}
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- endunless -%}
+
+  <div class="container">
+    <div class="row justify-center lg:justify-between pdp_container">
+      <div class="col w-full max-w-sm md:max-w-none md:w-1/2 mb-4 lg:mb-0">
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+        {%- if product.images.size > 0 -%}
+
+        <div class="glide product-gallery">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              {% for image in product.images %}
+              <li>
+                {% include 'responsive-image' with
+                image: image,
+                max_width: 570,
+                max_height: 570,
+                image_attributes: "data-product-featured-image",
+                wrapper_attributes: "data-product-image-wrapper",
+                %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="md:-mx-1 flex justify-center md:justify-start my-4 md:my-10" data-glide-el="controls[nav]">
+            {%- for image in product.images -%}
+            <button data-glide-dir="={{ forloop.index0 }}" class="p-1 product-gallery__bullet">
+              {% include 'responsive-image' with image: image, max_width: 80, max_height: 80, wrapper_class: 'w-20 h-20
+              hidden md:block' %}
+            </button>
+            {%- endfor -%}
+          </div>
+
+        </div>
+
+        {%- endif -%}
+      </div>
+
+      <div class="col w-full md:w-1/2 lg:w-5/12">
+        <h1 class="font-bold mb-0 leading-none product-title">
+          {{ product_title }}
+        </h1>
+        <span class="selected-option"> {{product.variants[0].title}} </span>
+        {%- comment -%}
+        <div class="product-sub-title portrait:text-left text-primary font-medium mb-1">
+          {{ product.metafields.katefarms.product_sub_header }}
+        </div>
+        {%- endcomment -%}
+
+        {%- if settings.show_reviews -%}
+        <div class="product-ratings-short pb-4">
+          {% include 'okendo-reviews-product-rating-summary' %}
+        </div>
+        {%- endif -%}
+
+        <div class="rte text-ada-gray text-base mt-3">
+          {{ product.description }}
+        </div>
+
+        {% if product.metafields.katefarms.product_campaign != blank %}
+        <div
+          class="rte bg-{{ product.metafields.katefarms.product_campaign_background }} text-{{ product.metafields.katefarms.product_campaign_text_color }} rounded-lg my-5 text-sm{% if product.metafields.katefarms.product_campaign_padding != 'true' %} p-5{% endif %}">
+          {{ product.metafields.katefarms.product_campaign }}
+        </div>
+        {% endif %}
+
+        {% form 'product', product, data-product-form: '', data-product-handle: product.handle,
+        data-enable-history-state: 'true', data-productid: product.id %}
+
+        <div class="row mt-6">
+
+          {%- unless has_single_variant -%}
+
+          {%- assign options_count = collections[key].products.size -%}
+
+          {%- if all_products != blank -%}
+          {%- assign options_count = all_options.size -%}
+          {%- endif -%}
+
+          <div class="col w-full {% if options_count < 3 %} has-lt3-options {% endif %}">
+            <div class="text-primary-blue text-sm mb-1"><span class="font-bold"> Flavor: </span> {{ flavor }}</div>
+
+            <div class="flex flex-wrap -mx-2">
+              {%- if all_options == blank -%}
+              {% include 'product-options-by-collection', key: key %}
+              {%- else -%}
+              {% include 'product-options-by-metafields', all_options: all_options, flavor: flavor %}
+              {%- endif -%}
+            </div>
+
+          </div>
+
+          {%- endunless -%}
+
+          <!-- size -->
+          {% if product.options contains "Size" %}
+          <div class="col w-full ">
+            <!-- <div class="text-primary-blue text-sm mb-1">
+              <span class="font-bold">Size: </span>
+              <span class="selected-option"> {{product.variants[0].title}} </span>
+            </div> -->
+            <div class="flex flex-wrap -mx-2">
+              {% assign isFirst = true %}
+              {% for variant in product.variants %}
+              {% if variant.available %}
+              {% comment %} <div class="product-select-wrap px-2 pb-6 size-options" option="{{variant.id}}"
+                value="{{variant.title}}">
+                {% if isFirst %}
+                <span class="product-select active">{{variant.title}}</span>
+                {% assign isFirst = false %}
+                {% else %}
+                <span class="product-select">{{variant.title}}</span>
+                {% endif %}
+              </div> {% endcomment %}
+              {% endif %}
+              {% endfor %}
+            </div>
+
+          </div>
+          {% endif %}
+          <!-- end size -->
+
+          <div class="col quantity-wrap">
+            <label for="Quantity" class="block text-primary-blue font-bold mb-1 text-sm">{{ 'products.product.quantity'
+              | t }}</label>
+            <div class="product-quantity-wrapper relative">
+              <button type="button" data-number-switch data-number-decrement data-number-target="#Quantity"
+                class="product-quantity-switch number-less js cursor-pointer text-primary-blue hover:text-black focus:text-black px-4 py-3 absolute left-0 top-1/2">&ndash;</button>
+              <button type="button" data-number-switch data-number-increment data-number-target="#Quantity"
+                class="product-quantity-switch number-more js cursor-pointer text-primary-blue hover:text-black focus:text-black px-4 py-3 absolute right-0 top-1/2">&plus;</button>
+
+              <input
+                class="remove-number-spinner text-lg text-primary-blue border border-lightest-green inline-block leading-tight py-3 px-6 text-center rounded-full block w-full"
+                type="number" id="Quantity" name="quantity" value="1" min="1"
+                data-number-more=".product-quantity-wrapper .number-more"
+                data-number-less=".product-quantity-wrapper .number-less">
+            </div>
+          </div>
+          {% comment %} // quantity col {% endcomment %}
+        </div>
+
+
+        <select name="id" style="visibility: hidden">
+          {% for variant in product.variants %}
+          <option {% if variant==current_variant %}selected="selected" {% endif %} {% unless variant.available
+            %}disabled="disabled" {% endunless %} value="{{ variant.id }}">
+            {{ variant.title }}
+          </option>
+          {% endfor %}
+        </select>
+
+        <noscript>
+          <select name="id">
+            {% for variant in product.variants %}
+            <option {% if variant==current_variant %}selected="selected" {% endif %} {% unless variant.available
+              %}disabled="disabled" {% endunless %} value="{{ variant.id }}">
+              {{ variant.title }}
+            </option>
+            {% endfor %}
+          </select>
+        </noscript>
+
+        {% comment %} <div data-price-wrapper class="block text-primary-blue mt-5">
+          <span data-product-price class="font-bold text-xl">
+            {{ current_variant.price | money }}
+          </span>
+
+          {% if product.compare_at_price_max > product.price %}
+          <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+          <s id="compareAt" class="mr-2" data-compare-price>
+            {% if current_variant.compare_at_price > current_variant.price %}
+            {{ current_variant.compare_at_price | money }}
+            {% endif %}
+          </s>
+          {% endif %}
+
+          {%- if case_size > 1 -%}
+          <span class="unit-price-wrap">
+            (<span data-product-unit-price>{{ current_variant.price | divided_by: case_size | money}}</span>/bottle)
+          </span>
+          {%- endif -%}
+
+          <span data-product-frequency-wrapper style="display: none;">every <span data-product-frequency>4 weeks</span>
+          </span>
+        </div> {% endcomment %}
+
+        <button type="submit" name="add" data-submit-button {% unless current_variant.available %}disabled="disabled" {%
+          endunless %}
+          class="btn btn-lg text-xl {% unless current_variant.available %}btn-disabled{% else %}btn-midnight-blue{% endunless %} block w-full mt-4">
+          <span data-submit-button-text>
+            {% if current_variant.available %}
+            {{ 'products.product.add_to_cart' | t }}
+            {% else %}
+            {{ 'products.product.sold_out' | t }}
+            {% endif %}
+          </span>
+        </button>
+
+        {% comment %}
+        <div class="text-center mt-2 text-base">
+          {%- if product.available -%}
+          <span class="font-bold text-ada-green">
+            {{ 'products.product.in_stock' | t }}
+          </span>
+
+          {%- if section.settings.shipping_content != blank -%}
+          <a href="#shipping-content" data-shipping-modal-trigger title="Shipping information" class="underline">
+            {%- endif -%}
+
+            {{ 'products.product.shipping' | t }}
+
+            {%- if section.settings.shipping_content != blank -%}
+          </a>
+          {%- endif -%}
+
+          <div data-shipping-modal-content>
+            <div class="shipping-content w-full max-w-md mx-auto bg-white rounded-md shadow-lg p-4 relative">
+
+              <button type="button"
+                class="appearance-none bg-transparent rounded-full w-10 h-10 absolute top-0 right-0 text-xl opacity-50 hover:opacity-100 focus:opacity-100 transition-opacity duration-150 ease-in-out"
+                aria-label="Close shipping information" data-shipping-modal-close> &times; </button>
+
+              {%- if section.settings.shipping_content_title != blank -%}
+              <div class="h3 text-black font-semibold mb-3 leading-tight">
+                {{ section.settings.shipping_content_title }}
+              </div>
+              {%- endif -%}
+
+              <div class="rte text-base text-black leading-snug"> {{ section.settings.shipping_content }} </div>
+
+            </div>
+          </div>
+
+          {%- endif -%}
+        </div>
+        {% endcomment %}
+        {% endform %}
+
+      </div>
+    </div>
+  </div>
+
+  {%- if settings.use_analytics_scripts -%}
+
+  <!-- Enhanced Ecommerce -->
+  <script>
+    // Measure a view of product details. This example assumes the detail view occurs on pageload,
+    // and also tracks a standard pageview of the details page.
+    var dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'productDetailImpression',
+      'ecommerce': {
+        'detail': {    // 'detail' actions have an optional list property.
+          'products': [{
+            'name': '{{ product.title }}',         // Name or ID is required.
+            'id': '{{ product.id }}',
+            'price': '{{ current_variant.price | money }}',
+            'variant': '{{ current_variant.title }}'
+          }]
+        }
+      }
+    });
+
+    if (window.jQuery) {
+      jquery = window.jQuery;
+    }
+
+    jquery('button[name="add"]').click(function () {
+      // Measure adding a product to a shopping cart by using an 'add' actionFieldObject
+      // and a list of productFieldObjects.
+
+      console.log("{{product.variants[0].id}}")
+
+      var dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'addToCart',
+        'ecommerce': {
+          'currencyCode': 'USD',
+          'add': {                                // 'add' actionFieldObject measures.
+            'products': [{                        //  adding a product to a shopping cart.
+              'name': '{{ product.title }}',
+              'id': '{{ product.id }}',
+              'price': '{{ current_variant.price | money }}',
+              'variant': '{{ current_variant.title }}',
+              'quantity': document.getElementById("Quantity").value
+            }]
+          }
+        }
+      });
+
+    });
+
+  </script>
+
+  <script type="text/javascript">
+    var _learnq = _learnq || [];
+    var item = {
+      Name: {{ product.title| json }},
+    ProductID: { { product.id | json } },
+    Categories: { { product.collections | map: 'title' | json } },
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+      URL: "{{ shop.secure_url }}{{ product.url }}",
+        Brand: { { product.vendor | json } },
+    Price: { { product.price | money | json } },
+    CompareAtPrice: { { product.compare_at_price_max | money | json } }
+  };
+    _learnq.push(['track', 'Viewed Product', item]);
+    _learnq.push(['trackViewedItem', {
+      Title: item.Name,
+      ItemId: item.ProductID,
+      Categories: item.Categories,
+      ImageUrl: item.ImageURL,
+      Url: item.URL,
+      Metadata: {
+        Brand: item.Brand,
+        Price: item.Price,
+        CompareAtPrice: item.CompareAtPrice
+      }
+    }]);
+
+
+    $(document).ready(function () {
+      $(".size-options").on('click', function () {
+        $(".size-options span").removeClass("active");
+        $(this).find(".product-select").addClass("active");
+        $(".selected-option").html($(this).attr("value"));
+
+        let selected = $(this).attr("option");
+        $('select[name="id"]').val(selected);
+      })
+
+
+
+
+    })
+  </script>
+
+  {%- endif -%}
+
+  <script type="application/json" data-pricing-information>
+{
+  {%- if current_variant.metafields.subscriptions.discount_variant_price -%}
+    "autodeliver": "{{ current_variant.metafields.subscriptions.discount_variant_price | replace: '.', '' }}",
+  {%- endif -%}
+
+  "onetime": "{{ current_variant.price }}"
+}
+</script>
+
+
+</section>
+
+{% schema %}
+{
+"name": "Product pages",
+"settings": [
+{
+"type": "header",
+"content": "Shipping details",
+"info": "Modal containing more information about shipping."
+},
+{
+"type": "text",
+"id": "shipping_content_title",
+"label": "Shipping content title",
+"default": "Shipping information"
+},
+{
+"type": "richtext",
+"id": "shipping_content",
+"label": "Shipping content"
+}
+]
+}
+{% endschema %}

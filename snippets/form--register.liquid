@@ -1,0 +1,72 @@
+{% form 'create_customer' %}
+  <h3>{{ 'customer.register.title' | t }}</h3>
+
+  {{ form.errors | default_errors }}
+
+  <div class="mt-4">
+    <label for="FirstName" class="form-label">
+      {{ 'customer.register.first_name' | t }}
+    </label>
+    <input type="text"
+      name="customer[first_name]"
+      id="FirstName"
+      class="form-control"
+      placeholder="{{ 'customer.register.first_name' | t }}"
+      {%- if _enable_autofocus -%}
+        autofocus
+      {%- endif -%}
+      {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
+  </div>
+
+  <div class="mt-4">
+  <label for="LastName" class="form-label">
+    {{ 'customer.register.last_name' | t }}
+  </label>
+  <input type="text"
+    name="customer[last_name]"
+    class="form-control"
+    id="LastName"
+    placeholder="{{ 'customer.register.last_name' | t }}"
+    {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+  </div>
+
+  <div class="mt-4">
+  <label for="Email" class="form-label">
+    {{ 'customer.register.email' | t }}
+  </label>
+  <input type="email"
+    name="customer[email]"
+    id="Email"
+    class="form-control {% if form.errors contains 'email' %}input-error{% endif %}"
+    placeholder="{{ 'customer.register.email' | t }}"
+    value="{% if form.email %}{{ form.email }}{% endif %}"
+    spellcheck="false"
+    autocomplete="off"
+    autocapitalize="off">
+  </div>
+
+  <div class="mt-4">
+  <label for="CreatePassword" class="form-label">
+    {{ 'customer.register.password' | t }}
+  </label>
+  <input type="password"
+    name="customer[password]"
+    id="CreatePassword"
+    class="form-control {% if form.errors contains 'password' %}input-error{% endif %}"
+    placeholder="{{ 'customer.register.password' | t }}">
+  </div>
+
+  <div class="mt-4">
+    <div class="text-sm mb-3 leading-tight text-ada-gray">
+      {{ 'customer.legal.register_privacy_terms_html' | t }}
+    </div>
+
+    <button type="submit" class="btn btn-black mt-4">
+      {{ 'customer.register.submit' | t }}
+    </button>
+  </div>
+
+  <div class="mt-4">
+    <a class="text-xs text-primary-blue underline mx-2" href="{{ shop.url }}">{{ 'customer.register.cancel' | t }}</a>
+  </div>
+{% endform %}

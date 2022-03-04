@@ -1,0 +1,53 @@
+<div class="container pb-8">
+  <div class="row justify-between">
+    <div class="col w-full md:w-1/2 xl:w-5/12">
+      {% include 'form--login' %}
+      {% include 'form--reset-password' %}
+    </div>
+
+    <div class="col w-full md:w-1/2 xl:w-5/12">
+      <div class="become_partner">Sign up to become a partner</div>
+      <a href=/account/register><div class="become_partner_apply">Apply</div></a>
+      {% comment %}
+      {% render 'form--register', _enable_autofocus: false %}
+      {% endcomment %}
+    </div>
+  </div>
+
+
+
+  {% if shop.checkout.guest_login %}
+    <h2>{{ 'customer.login.guest_title' | t }}</h2>
+
+    {% form 'guest_login' %}
+      <input type="submit" class="button" value="{{ 'customer.login.guest_continue' | t }}">
+    {% endform %}
+  {% endif %}
+
+</div>
+
+<style>
+  .become_partner {
+    font-size: 1.625rem;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+  .become_partner_apply {
+    font-size: 1.125rem;
+    font-weight: 500;
+    background-color: #01141E;
+    color: white;
+    border-radius: 26px;
+    width: 120px;
+    text-align: center;
+    margin-top: 40px;
+    padding: .75rem 2rem;
+    padding-top: 0.75rem;
+    padding-right: 2rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2rem;
+  }
+  #wufooFormmy6oiv0wyhvk3 {
+    height: 1700px;
+  }
+</style>

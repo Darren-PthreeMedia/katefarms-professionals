@@ -1,0 +1,35 @@
+<form method="get" id="searchform" action="https://{{ wordpress_url }}" class="w-full flex items-center search-form">
+  <label
+    for="s"
+    class="sr-only"
+  >
+    {{ 'layout.search.term-label' | t}}
+  </label>
+
+  <div class="relative">
+
+    <input
+      class="search-form__input bg-white border border-gray-500 rounded-full leading-none p-3 pl-12"
+      type="text"
+      name="s"
+      id="s"
+      autocomplete="off"
+      value=""
+      placeholder="{{ 'layout.search.placeholder' | t }}"
+    >
+
+    <button
+      type="submit"
+      class="search-form__submit submit block absolute left-0 inset-y-0 ml-1 my-2 w-10 p-1 text-gray-600"
+      id="searchsubmit"
+    >
+      {% include 'icon--search.svg' %}
+
+      <span class="sr-only"> Search </span>
+    </button>
+
+    <input type="hidden" name="post_type" value="any">
+  </div>
+
+</form>
+

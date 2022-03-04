@@ -1,0 +1,41 @@
+<section data-section-type="product-customer-service" data-section-id="{{ section.id }}">
+  <div class="container py-6 xl:py-12">
+
+    <div class="row mb-6">
+      <div class="col w-full">
+        {%- if section.settings.heading_title != blank -%}
+          <h2 class="leading-tight md:pb-1 md:border-b md:border-lightest-gray text-4xl">{{ section.settings.heading_title }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.heading_content != blank -%}
+          <div class="xl:w-2/3">
+            <div class="rte">{{ section.settings.heading_content | replace: '</a>', ' &rsaquo;</a>' }}</div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Customer Service Content",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Customer Service Content"
+      },
+      {
+        "type": "text",
+        "id": "heading_title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_content",
+        "label": "Content"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,25 @@
+<a
+  href="/cart"
+  class="inline-block ml-3 cart_count"
+  data-header-cart
+>
+
+  <div class="w-8 h-8 flex items-center relative">
+
+    <div class="icon-svg text-primary-blue">
+      {% include 'icon--cart.svg' %}
+    </div>
+      <div
+        data-header-cart-count
+        class="bg-ada-green text-white border-2 border-white rounded-full absolute right-0 top-0 text-center font-medium {% if cart.item_count == 0 %}cart_zero_hidden{% endif %}"
+      >
+        {{ cart.item_count}}
+      </div>
+    
+
+  </div>
+
+  <span class="sr-only">
+    {{ 'layout.cart.title' | t }}
+  </span>
+</a>

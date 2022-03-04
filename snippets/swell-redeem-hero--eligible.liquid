@@ -1,0 +1,30 @@
+<h1 class="leading-tight">
+  {{ 'swell.redeem.eligible_title' | t }}
+</h1>
+
+<div class="hero-content my-4">
+  <div>
+    {{ 'swell.redeem.eligible_content' | t }}
+  </div>
+
+  <div>
+    {{ 'swell.redeem.eligible_coupon_prefix' | t }}
+    <span class="font-bold" data-swell-discount-code> </span>
+  </div>
+</div>
+
+<div class="hero-buttons-wrap mt-4">
+  <a href="#redeem-shop" class="btn btn-sm btn-primary-blue mr-4">
+    {{ 'swell.redeem.eligible_shop_button_text' | t }} &rsaquo;
+  </a>
+
+  <button
+    class="btn btn-sm btn-ada-green"
+    data-swell-coupon-clipboard data-clipboard-text=""
+    type="button"
+    data-copied-text="{{ 'swell.refer.existing_user.share_form.copied_text' | t }}"
+  >
+    {{ 'swell.redeem.eligible_copy_button_text' | t }}
+  </button>
+</div>
+

@@ -1,0 +1,12 @@
+{%- assign meta = product.metafields -%}
+{%- assign price_min = product.price_min -%}
+
+{% comment %} Check if we have a subscription - if so, get the "remaining" price after factoring the subscription discount. {% endcomment %}
+{%- if meta.subscriptions.subscription_id -%}
+  {%- assign subscription_product = meta.subscriptions -%}
+  {%- assign discount_percentage = subscription_product.discount_percentage | round: 2 -%}
+  {%- assign discount_floor = subscription_product.discount_percentage | floor | divided_by: 100.0 -%}
+  {%- assign remainder = 1.0 | minus: discount_floor -%}
+
+  {%- assign price_min = product.price_min | times: remainder  -%}
+{%- endif -%}

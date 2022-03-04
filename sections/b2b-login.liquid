@@ -1,0 +1,21 @@
+<div class="container pt-8 pb-8">
+  <div class="login-or-sign-up row justify-between">
+    <div class="col w-full md:w-1/2 xl:w-5/12">
+      {% include 'form--login' %}
+      {% include 'form--reset-password' %}
+    </div>
+    <div class="col w-full md:w-1/2 xl:w-5/12 text-center">
+      <div class="become-ambassador">
+        <img src="https://cdn.shopify.com/s/files/1/0552/7103/0961/files/KF-NutritionComm-Badge_V1.png?v=1643052483">
+        <h2>Join the community!</h2>
+        <p class="text-center">Enjoy exclusive access to on-demand CEUs, patient education resources, product samples, and patient materials for your office.</p>
+        <a href="/account/register" class="btn">Apply Now</a>
+      </div>
+    </div>
+    {% if shop.checkout.guest_login %}
+      <h2>{{ 'customer.login.guest_title' | t }}</h2>
+    {% form 'guest_login' %}
+      <input type="submit" class="button" value="{{ 'customer.login.guest_continue' | t }}">
+    {% endform %}
+  {% endif %}
+</div>

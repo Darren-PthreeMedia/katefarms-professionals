@@ -1,0 +1,49 @@
+  <div class="container my-8">
+    <div class="flex bg-white flex-wrap">
+      <div class="col w-full md:w-1/2 md:flex md:flex-wrap py-4 md:py-8 pl-0 xl:pr-8 bg-white">
+        <div class="md:flex-1">
+          <h1 class="collection-title w-5/6 md:w-full font-bold leading-none mb-6"> {{ collection.title }} </h1>
+          <div class="rte">
+            {{ collection.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row -mx-2 md:-mx-4">
+    {%- comment %}<locksmith:5a44>{% endcomment -%}
+      {%- assign locksmith_dbfd_forloop__size = 0 %}{% for product in collection.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_dbfd_forloop__size = locksmith_dbfd_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_dbfd_forloop__index = nil -%}
+    {%- comment %}</locksmith:5a44>{% endcomment -%}
+    {% for product in collection.products %}
+      {%- comment %}<locksmith:29c5>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_dbfd_forloop__index == nil %}{% assign locksmith_dbfd_forloop__index = 1 %}{% assign locksmith_dbfd_forloop__index0 = 0 %}{% else %}{% assign locksmith_dbfd_forloop__index = locksmith_dbfd_forloop__index | plus: 1 %}{% assign locksmith_dbfd_forloop__index0 = locksmith_dbfd_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_dbfd_forloop__index == 1 %}{% assign locksmith_dbfd_forloop__first = true %}{% else %}{% assign locksmith_dbfd_forloop__first = false %}{% endif %}{% if locksmith_dbfd_forloop__index == locksmith_dbfd_forloop__size %}{% assign locksmith_dbfd_forloop__last = true %}{% else %}{% assign locksmith_dbfd_forloop__last = false %}{% endif %}{% assign locksmith_dbfd_forloop__rindex = locksmith_dbfd_forloop__size | minus: locksmith_dbfd_forloop__index | minus: 1 %}{% assign locksmith_dbfd_forloop__rindex0 = locksmith_dbfd_forloop__size | minus: locksmith_dbfd_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+      {%- comment %}</locksmith:29c5>{% endcomment -%}
+      {%- assign url = product.url | within: collection -%}
+
+      <div class="col w-1/2 p-2 md:p-4 md:w-1/3 flex">
+        {% include 'product-card', _product: product, url: url, position: locksmith_dbfd_forloop__index, listType: 'collection' %}
+      </div>
+      
+    {% else %}
+      {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+        {% for i in (1..8) %}
+          <a href="#">
+            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+          </a>
+
+          <p>
+            <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
+          </p>
+
+          <p>
+            {{ 1999 | money }}
+          </p>
+        {% endfor %}
+      {% else %}
+        <p>{{ 'collections.general.no_matches' | t }}</p>
+      {% endif %}
+
+    {% endfor %}
+
+    </div>
+  </div>

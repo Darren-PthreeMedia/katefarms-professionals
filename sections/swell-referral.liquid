@@ -1,0 +1,33 @@
+{%
+  include 'swell-referral',
+  _title: section.settings.title,
+  _content: section.settings.content
+%}
+
+{% schema %}
+  {
+    "name": "Swell Referral Content",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+      {
+        "id": "content",
+        "type": "html",
+        "label": "Content"
+      },
+      {
+        "id": "banner",
+        "type": "image_picker",
+        "label": "Banner Image"
+      },
+      {
+        "id": "banner_mobile",
+        "type": "image_picker",
+        "label": "Banner Image (Mobile)"
+      }
+    ]
+  }
+{% endschema %}

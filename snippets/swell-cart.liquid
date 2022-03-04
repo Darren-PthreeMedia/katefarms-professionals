@@ -1,0 +1,45 @@
+<div class="swell-cart-container">
+
+  <div class="swell-cart-redeem">
+
+    <p class="swell-cart-point mb-4 leading-tight font-medium">
+      You have <span class="points"> <span class="swell-point-balance-dollar">$X</span> in redeemable credit.</span>
+    </p>
+
+    <div class="row">
+      <div class="col">
+        <label for="cart-redeem" class="text-ada-gray text-lg font-bold leading-tight">Select an amount</label>
+      </div>
+    </div>
+
+    <div class="swell-cart-element row mb-8">
+      <div class="col w-1/2">
+        <select
+          class="cart-fixed-amount form-control rounded-full"
+          name="cart"
+          id="cart-redeem"
+        ></select>
+      </div>
+
+      <div class="col w-1/2">
+        <input
+          type="button"
+          value="Apply"
+          class="swell-apply btn btn-black w-full block font-light"
+        >
+      </div>
+    </div>
+
+    {% comment %} <div class="absolute pin swell-cart-spinner transition-fast flex items-center justify-center">
+
+      <div class="bg-white absolute pin opacity-50"> </div>
+
+      <div class="swell-spinner">
+        {% include 'spinner' %}
+      </div>
+
+    </div> {% endcomment %}
+
+  </div>
+
+</div>

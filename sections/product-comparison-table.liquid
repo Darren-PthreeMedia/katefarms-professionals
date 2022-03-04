@@ -1,0 +1,44 @@
+{%- assign table_id = settings.comparison_table_id -%}
+
+{%- if product.metafields.katefarms.table_id != blank -%}
+  {%- assign table_id = product.metafields.katefarms.table_id -%}
+{%- endif -%}
+
+{%- unless product.metafields.katefarms.hide_comparison_table -%}
+  {%- if settings.comparison_table_id != blank -%}
+
+    <section data-section-type="product-comparison-table" data-section-id="{{ section.id }}">
+      <div class="container">
+        <div class="c-accordion__item border-t-0">
+          <h2 class="c-accordion__title" role="button" tabindex="0" aria-controls="{{ section.id }}-info" aria-expanded="false">
+            {{ section.settings.accordion_title }}
+          </h2>
+
+          <div id="{{ section.id }}-info" class="c-accordion__content pl-0 -mx-4 sm:mx-0 pb-12" style="display: none;">
+            <div class="row py-4">
+              {%- if table_id != blank -%}
+                <div class="col w-full" data-comparison-table-root="{{ table_id }}"></div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  {%- endif -%}
+{%- endunless -%}
+
+{% schema %}
+  {
+    "name": "Comparison table",
+    "settings": [
+      {
+        "id": "accordion_title",
+        "type": "text",
+        "label": "Accordion title",
+        "default": "Compare Formulas"
+      }
+    ]
+  }
+{% endschema %}

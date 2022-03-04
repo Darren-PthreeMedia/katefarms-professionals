@@ -1,0 +1,47 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content-container">
+      <div class="copy">
+        <h1>{{ section.settings.headline }}</h1>
+        {{ section.settings.subheadline }}
+      </div>
+    </div>
+  </div> 
+</section>
+
+{% schema %}
+{
+  "name": "Page Hero",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "label": "Headline",
+      "id": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Subheadline",
+      "id": "subheadline",
+      "type": "html"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .hero {
+    background-color: {{ section.settings.background_color }};
+  }
+  .hero h1 {
+    color: {{ section.settings.heading_color }};
+  }
+</style>

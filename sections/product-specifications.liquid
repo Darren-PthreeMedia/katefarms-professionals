@@ -1,0 +1,25 @@
+{%- assign meta = product.metafields.katefarms -%}
+
+<section data-section-type="product-specifications" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="c-accordion__item">
+      <h2 class="c-accordion__title" role="button" tabindex="0" aria-controls="{{ section.id }}-info" aria-expanded="false">
+        Product Specifications
+      </h2>
+
+      <div id="{{ section.id }}-info" class="c-accordion__content pb-12" style="display: none;">
+        <div class="row py-4">
+          {{ product.metafields.accentuate.product_specifications_html }}        
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Product Specifications"
+  }
+{% endschema %}

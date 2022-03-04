@@ -1,0 +1,49 @@
+{%- assign meta = product.metafields.katefarms -%}
+
+<section data-section-type="product-agt" data-section-id="{{ section.id }}" class="mt-6">
+
+<div class="container py-6">
+  <div class="row">
+    <div class="col w-full">
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="mb-4 text-4xl">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    {%- for title in product.metafields.katefarms.benefit_block_title -%}
+      {% comment %} {%- assign slug = product.metafields.katefarms.benefit_block_slug[forloop.index0] -%} {% endcomment %}
+      {%- assign content = product.metafields.katefarms.benefit_block_content[forloop.index0] -%}
+      {%- assign slug = meta.benefit_block_slug[forloop.index0] -%}
+
+
+
+      <div class="col w-full md:w-1/2 lg:w-1/3 sm:flex pb-4 sm:pb-8">
+        {% include 'benefit-block', image: slug, content: content, title: title, index: forloop.index %}
+      </div>
+
+    {%- endfor -%}
+
+  </div>
+</div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "All Good Things Content",
+    "settings": [
+      {
+        "id": "heading",
+        "label": "Heading",
+        "type": "text"
+      }
+    ]
+  }
+{% endschema %}
